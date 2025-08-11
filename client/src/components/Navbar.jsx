@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 function Navbar() {
   const [user, setUser] = useState(false);
   return (
-    <div className=" bg-gray-900 w-full h-16 flex items-center justify-between px-4">
+    <div className=" bg-gray-900 w-full  justify-between  px-4 lg:px-6 h-14 flex items-center border-b border-gray-800">
       {/* logo */}
       <div className=" flex items-center text-white gap-2">
         <GraduationCap className=" w-10 h-10" />
@@ -19,15 +19,24 @@ function Navbar() {
       <div className=" text-white text-xl font-medium">
         <nav className="">
           <ul className=" flex items-center gap-4">
-            <li>Home</li>
-            <li>Courses</li>
+            <Link to="/" className=" hover:text-blue-500 transition-colors">
+              {" "}
+              <li>Home</li>
+            </Link>
+            <Link
+              to="/courses"
+              className=" hover:text-blue-500 transition-colors"
+            >
+              {" "}
+              <li>Courses</li>
+            </Link>
             {!user ? (
               <div className=" flex gap-3">
                 <Button className=" bg-blue-500 hover:bg-blue-600 text-white">
-                  <Link to="/auth">Login</Link>
+                  <Link to="/Login">Login</Link>
                 </Button>
                 <Button className=" bg-gray-500 hover:bg-gray-600 ">
-                  <Link to="/auth">Sign Up</Link>
+                  <Link to="/Signup">Sign Up</Link>
                 </Button>
               </div>
             ) : (
