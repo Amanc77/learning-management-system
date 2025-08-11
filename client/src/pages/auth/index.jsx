@@ -9,7 +9,7 @@ function AuthPage() {
   return (
     <>
       <div className=" flex flex-col min-h-screen bg-gray-900">
-        <header className=" px-4 lg:px-6 h-14 flex items-center border-b border-gray-800">
+        <header className=" px-4 lg:px-6 h-14 flex items-center border-b border-gray-800 ">
           <Link to="/" className="text-2xl font-bold text-blue-600">
             <GraduationCap className="inline-block w-6 h-6 mr-2" />
             <span className="font-extrabold text-xl"> LMS Learn</span>
