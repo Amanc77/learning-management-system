@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import axios from "axios";
 import { toast } from "sonner";
 
@@ -23,28 +22,41 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
+
+    // simple check
+    if (!user.name || !user.email || !user.password) {
+      toast.error("All fields are required");
+      return;
+    }
+
     try {
       const response = await axios.post(
         "http://localhost:8000/api/v1/user/register",
-        user,
         {
-          headers: {
-            "Content-Type": "application/json",
-          },
+          ...user,
+          name: user.name.trim(),
+          email: user.email.trim(),
+        },
+        {
+          headers: { "Content-Type": "application/json" },
           withCredentials: true,
         }
       );
+
       if (response.data.success) {
         toast.success(response.data.message);
         navigate("/login");
       } else {
-        toast.error("something went wrong");
+        toast.error(response.data.message || "Something went wrong");
       }
     } catch (error) {
-      console.log(error);
+      console.error("Signup error:", error);
+      toast.error(
+        error.response?.data?.message || "Server error. Try again later."
+      );
     }
   };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
       <div className="bg-gray-800 w-full max-w-md rounded-lg shadow-lg p-6">
@@ -61,7 +73,6 @@ function Signup() {
           <Input
             type="text"
             name="name"
-            id="name"
             onChange={handleChange}
             value={user.name}
             placeholder="Enter your full name"
@@ -75,7 +86,6 @@ function Signup() {
           <Input
             type="email"
             name="email"
-            id="email"
             onChange={handleChange}
             value={user.email}
             placeholder="Enter your email"
@@ -89,7 +99,6 @@ function Signup() {
           <Input
             type="password"
             name="password"
-            id="password"
             onChange={handleChange}
             value={user.password}
             placeholder="Enter your password"
@@ -100,41 +109,31 @@ function Signup() {
         {/* Role */}
         <div className="mb-4">
           <Label className="text-gray-300 mb-2">Role</Label>
-          <RadioGroup
-            onChange={handleChange}
-            className="flex gap-6 mt-1"
-            defaultValue={user.role}
-          >
-            <div className="flex items-center space-x-2">
+          <div className="flex gap-6 mt-1">
+            <label className="flex items-center space-x-2">
               <input
                 type="radio"
                 name="role"
-                id="role1"
                 value="student"
                 onChange={handleChange}
                 checked={user.role === "student"}
               />
-              <Label htmlFor="role" className="text-gray-200">
-                Student
-              </Label>
-            </div>
-            <div className="flex items-center space-x-2">
+              <span className="text-gray-200">Student</span>
+            </label>
+            <label className="flex items-center space-x-2">
               <input
                 type="radio"
                 name="role"
-                id="role2"
                 value="instructor"
                 onChange={handleChange}
                 checked={user.role === "instructor"}
               />
-              <Label htmlFor="role2" className="text-gray-200">
-                Instructor
-              </Label>
-            </div>
-          </RadioGroup>
+              <span className="text-gray-200">Instructor</span>
+            </label>
+          </div>
         </div>
 
-        {/* Submit Button */}
+        {/* Submit */}
         <Button
           onClick={handleSubmit}
           className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md"
@@ -142,7 +141,6 @@ function Signup() {
           Sign Up
         </Button>
 
-        {/* Footer */}
         <p className="text-center text-gray-400 mt-4">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-400 hover:underline">

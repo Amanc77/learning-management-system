@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useSelector } from "react-redux";
+import store from "../redux/store";
 
 function Navbar() {
-  const [user, setUser] = useState(false);
+  const { user } = useSelector((store) => store.auth);
   return (
     <div className=" bg-gray-900 w-full  justify-between  px-4 lg:px-6 h-14 flex items-center border-b border-gray-800">
       {/* logo */}
@@ -41,10 +43,12 @@ function Navbar() {
               </div>
             ) : (
               <div className=" flex items-center gap-3 ">
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                <Link to={"/profile"}>
+                  <Avatar>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </Link>
                 <Button className=" bg-red-500 hover:bg-red-600 text-white ml-2">
                   Logout
                 </Button>

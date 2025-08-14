@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# .env
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+
+# Frontend (React/Vite/etc.)
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+
+# Cache
+.cache/
+.next/
+out/
+coverage/
+
+# Temporary files
+*.swp
+*.tmp
+
+# Uploaded files (e.g., profile pictures, course materials)
+uploads/
+public/uploads/
+
+# MongoDB dump files
+dump/
+
+# Optional - if using TypeScript
+*.tsbuildinfo

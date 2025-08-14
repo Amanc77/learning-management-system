@@ -9,6 +9,7 @@ import Courses from "./components/Courses.jsx";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import ForgotPassword from "./pages/auth/Forgot-password";
+import Profile from "./pages/Profile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
       <Route path="/Signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/courses" element={<Courses />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 }
