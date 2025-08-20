@@ -4,10 +4,28 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import store from "../redux/store";
+import { toast } from "sonner";
+import axios from "axios";
+import { setUser } from "../redux/authSlice";
 
 function Navbar() {
+  const dispatch = useDispatch();
+  const logoutHandler = async (e) => {
+    http: try {
+      const res = await axios.get("http://localhost:8000/api/v1/user/logout", {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        dispatch(setUser(null));
+        toast.success(res.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data.message);
+    }
+  };
   const { user } = useSelector((store) => store.auth);
   return (
     <div className=" bg-gray-900 w-full  justify-between  px-4 lg:px-6 h-14 flex items-center border-b border-gray-800">
@@ -49,7 +67,10 @@ function Navbar() {
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                 </Link>
-                <Button className=" bg-red-500 hover:bg-red-600 text-white ml-2">
+                <Button
+                  onClick={logoutHandler}
+                  className=" bg-red-500 hover:bg-red-600 text-white ml-2"
+                >
                   Logout
                 </Button>
               </div>

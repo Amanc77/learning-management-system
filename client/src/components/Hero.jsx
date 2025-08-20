@@ -1,6 +1,6 @@
 import { Award, Search, User } from "lucide-react";
 import React from "react";
-import HeroImg from "../assets/HeroImg.png";
+import HeroImg from "../assets/lmsGirl.png";
 import CountUp from "react-countup";
 
 const Hero = () => {
@@ -30,15 +30,15 @@ const Hero = () => {
           </div>
         </div>
         {/* image section */}
-        <div className="flex md:h-[700px] items-end relative px-4 md:px-0">
-          <img src={HeroImg} alt="" className="w-[750px] " />
-          <div className="bg-slate-200 hidden md:flex gap-3 items-center rounded-md absolute top-[35%] right-0 px-4 py-2">
-            <div className="rounded-full bg-blue-400 p-2 text-white">
+        <div className="flex  md:h-[700px] w-full items-end relative px-4 md:px-0">
+          <img src={HeroImg} alt="" className="w-[700px] " />
+          <div className="bg-slate-200 hidden md:flex gap-3 items-center rounded-md absolute top-[40%] right-[-10%] px-4 py-2">
+            <div className="rounded-full bg-blue-400 p-2 text-white ">
               <User />
             </div>
             <div>
               <h2 className="font-bold text-2xl">
-                <CountUp end={4500} />+
+                <CountUp end={852} />+
               </h2>
               <p className="italic text-sm text-gray-600 leading-none">
                 Active Students
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
             <div>
               <h2 className="font-bold text-2xl">
-                <CountUp end={684} />+
+                <CountUp end={184} />+
               </h2>
               <p className="italic text-sm text-gray-600 leading-none">
                 Certified Students
