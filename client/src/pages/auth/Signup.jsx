@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import axios from "axios";
 import { toast } from "sonner";
+import axiosInstance from "@/utils/axiosInstance";
 
 function Signup() {
   const navigate = useNavigate();
@@ -23,25 +23,17 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // simple check
     if (!user.name || !user.email || !user.password) {
       toast.error("All fields are required");
       return;
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:8000/api/v1/user/register",
-        {
-          ...user,
-          name: user.name.trim(),
-          email: user.email.trim(),
-        },
-        {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true,
-        }
-      );
+      const response = await axiosInstance.post("/api/v1/user/register", {
+        ...user,
+        name: user.name.trim(),
+        email: user.email.trim(),
+      });
 
       if (response.data.success) {
         toast.success(response.data.message);
@@ -67,79 +59,84 @@ function Signup() {
           Join us today! It's quick and easy
         </p>
 
-        {/* Full Name */}
-        <div className="mb-4">
-          <Label className="text-gray-300">Full Name</Label>
-          <Input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={user.name}
-            placeholder="Enter your full name"
-            className="bg-gray-700 text-gray-200 mt-1"
-          />
-        </div>
-
-        {/* Email */}
-        <div className="mb-4">
-          <Label className="text-gray-300">Email Address</Label>
-          <Input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={user.email}
-            placeholder="Enter your email"
-            className="bg-gray-700 text-gray-200 mt-1"
-          />
-        </div>
-
-        {/* Password */}
-        <div className="mb-4">
-          <Label className="text-gray-300">Password</Label>
-          <Input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={user.password}
-            placeholder="Enter your password"
-            className="bg-gray-700 text-gray-200 mt-1"
-          />
-        </div>
-
-        {/* Role */}
-        <div className="mb-4">
-          <Label className="text-gray-300 mb-2">Role</Label>
-          <div className="flex gap-6 mt-1">
-            <label className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="role"
-                value="student"
-                onChange={handleChange}
-                checked={user.role === "student"}
-              />
-              <span className="text-gray-200">Student</span>
-            </label>
-            <label className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="role"
-                value="instructor"
-                onChange={handleChange}
-                checked={user.role === "instructor"}
-              />
-              <span className="text-gray-200">Instructor</span>
-            </label>
+        <form onSubmit={handleSubmit}>
+          {/* Full Name */}
+          <div className="mb-4">
+            <Label className="text-gray-300">Full Name</Label>
+            <Input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={user.name}
+              placeholder="Enter your full name"
+              className="bg-gray-700 text-gray-200 mt-1"
+              required
+            />
           </div>
-        </div>
 
-        {/* Submit */}
-        <Button
-          onClick={handleSubmit}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md"
-        >
-          Sign Up
-        </Button>
+          {/* Email */}
+          <div className="mb-4">
+            <Label className="text-gray-300">Email Address</Label>
+            <Input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={user.email}
+              placeholder="Enter your email"
+              className="bg-gray-700 text-gray-200 mt-1"
+              required
+            />
+          </div>
+
+          {/* Password */}
+          <div className="mb-4">
+            <Label className="text-gray-300">Password</Label>
+            <Input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={user.password}
+              placeholder="Enter your password"
+              className="bg-gray-700 text-gray-200 mt-1"
+              required
+            />
+          </div>
+
+          {/* Role */}
+          <div className="mb-4">
+            <Label className="text-gray-300 mb-2">Role</Label>
+            <div className="flex gap-6 mt-1">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="role"
+                  value="student"
+                  onChange={handleChange}
+                  checked={user.role === "student"}
+                />
+                <span className="text-gray-200">Student</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="role"
+                  value="instructor"
+                  onChange={handleChange}
+                  checked={user.role === "instructor"}
+                />
+                <span className="text-gray-200">Instructor</span>
+              </label>
+            </div>
+          </div>
+
+          {/* Submit */}
+          <Button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md"
+          >
+            Sign Up
+          </Button>
+        </form>
 
         <p className="text-center text-gray-400 mt-4">
           Already have an account?{" "}
@@ -151,5 +148,4 @@ function Signup() {
     </div>
   );
 }
-
 export default Signup;

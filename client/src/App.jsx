@@ -1,29 +1,32 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { Link, Route, Routes } from "react-router-dom";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import AuthPage from "./pages/auth/index.jsx";
-import Home from "./pages/Home.jsx";
-import Courses from "./components/Courses.jsx";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Home from "./pages/student/Home";
+import Courses from "@/pages/student/Courses";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
-import ForgotPassword from "./pages/auth/Forgot-password";
-import Profile from "./pages/Profile";
+import Profile from "./pages/student/Profile";
+import MyLearning from "./pages/student/MyLearning";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="Login" element={<Login />} />
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/my-learning" element={<MyLearning />} />
+      </Routes>
 
-      <Route path="/Signup" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/courses" element={<Courses />} />
-      <Route path="/profile" element={<Profile />} />
-    </Routes>
+      <Footer />
+    </>
   );
 }
 

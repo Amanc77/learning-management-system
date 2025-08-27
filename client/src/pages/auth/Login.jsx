@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import axios from "axios";
 import { toast } from "sonner";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/authSlice";
+import axiosInstance from "@/utils/axiosInstance";
 
 function Login() {
   const dispatch = useDispatch();
@@ -25,23 +25,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prevent empty submission
     if (!input.email || !input.password) {
       toast.error("Please fill in all fields");
       return;
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:8000/api/v1/user/login",
-        input,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
-      );
+      const response = await axiosInstance.post("/api/v1/user/login", input);
 
       if (response.data.success) {
         toast.success(response.data.message || "Login successful!");
@@ -123,5 +113,4 @@ function Login() {
     </div>
   );
 }
-
 export default Login;
