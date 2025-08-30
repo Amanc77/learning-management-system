@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import path from "path";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.routes.js";
+import courseRoute from "./routes/course.routes.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -27,6 +28,7 @@ connectDB();
 
 // Routes
 app.use("/api/v1/user", userRoute);
+app.use("/api/v1/course", courseRoute);
 
 // Serve frontend production if needed
 if (process.env.NODE_ENV === "production") {

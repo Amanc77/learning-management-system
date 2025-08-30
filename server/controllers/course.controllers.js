@@ -2,22 +2,23 @@ import { Course } from "../models/course.model.js";
 
 export const createCourse = async (req, res) => {
   try {
-    const { courseTitle, category } = req.body;
-    if (!courseTitle || !category) {
+    const { courseTitle, courseCategory } = req.body;
+    if (!courseTitle || !courseCategory) {
       return res.status(400).json({
-        message: "Course title and category is required.",
+        message: "Course title and courseCategory is required.",
       });
     }
 
     const course = await Course.create({
       courseTitle,
-      category,
+      courseCategory,
       creator: req.id,
     });
 
     return res.status(201).json({
-      course,
       message: "Course created.",
+      success: true,
+      course,
     });
   } catch (error) {
     console.log(error);
@@ -38,13 +39,13 @@ export const searchCourse = async (req, res) => {
       $or: [
         { courseTitle: { $regex: query, $options: "i" } },
         { subTitle: { $regex: query, $options: "i" } },
-        { category: { $regex: query, $options: "i" } },
+        { courseCategory: { $regex: query, $options: "i" } },
       ],
     };
 
     // if categories selected
     if (categories.length > 0) {
-      searchCriteria.category = { $in: categories };
+      searchCriteria.courseCategory = { $in: categories };
     }
 
     // define sorting order

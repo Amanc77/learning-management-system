@@ -12,10 +12,12 @@ function Courses() {
       <p className="text-center text-gray-400 mt-4">
         This is where you can browse and enroll in courses.
       </p>
-      <div className=" w-[1300px]  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-        {courses.map((courses, index) => {
-          return <CourseCard key={index} course={courses} />;
-        })}
+
+      {/* Responsive Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
+        {courses.map((course, index) => (
+          <CourseCard key={index} course={course} />
+        ))}
       </div>
     </div>
   );

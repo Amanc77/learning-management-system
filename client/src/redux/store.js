@@ -18,12 +18,10 @@ const persistConfig = {
   storage,
 };
 
-// Combine your slices into a single reducer function
 const rootReducer = combineReducers({
   auth: authSlice,
 });
 
-// Wrap rootReducer with persistReducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -13,6 +13,7 @@ function Navbar() {
   const navigate = useNavigate();
   const { user } = useSelector((store) => store.auth);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef();
 
   const logoutHandler = async () => {
@@ -43,32 +44,33 @@ function Navbar() {
   }, [dropdownOpen]);
 
   return (
-    <div className="bg-gray-900 w-full flex justify-between px-4 lg:px-6 h-16 items-center border-b border-gray-800">
-      {/* Logo */}
-      <div className="flex items-center text-white gap-2">
-        <GraduationCap className="w-10 h-10" />
-        <h1 className="text-2xl font-bold">LMS</h1>
-      </div>
+    <header className="bg-gray-900 w-full border-b border-gray-800">
+      <div className=" mx-2 flex justify-between items-center px-2 h-14 lg:justify-between ">
+        {/* Logo */}
+        <Link to="/" className="flex items-center text-white gap-2 mx-2">
+          <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />
+          <h1 className="text-xl sm:text-2xl font-bold">LMS</h1>
+        </Link>
 
-      {/* Navigation */}
-      <nav className="text-white text-xl font-medium">
-        <ul className="flex items-center gap-6">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-6 text-white text-lg font-bold">
           <Link to="/" className="hover:text-blue-500 transition-colors">
-            <li>Home</li>
+            Home
           </Link>
           <Link to="/courses" className="hover:text-blue-500 transition-colors">
-            <li>Courses</li>
+            Courses
           </Link>
 
           {user ? (
-            <div className="relative flex items-center gap-3" ref={dropdownRef}>
+            <div
+              className="relative flex items-center gap-3 mx-2"
+              ref={dropdownRef}
+            >
               <button
                 onClick={() => setDropdownOpen((prev) => !prev)}
                 className="focus:outline-none"
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen}
               >
-                <Avatar>
+                <Avatar className="w-12 h-12">
                   <AvatarImage
                     src={user.photoUrl || "https://github.com/shadcn.png"}
                   />
@@ -82,20 +84,20 @@ function Navbar() {
                   <Link
                     to="/my-learning"
                     onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     My Learning
                   </Link>
                   <Link
                     to="/profile"
                     onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     View Profile
                   </Link>
                   <button
                     onClick={logoutHandler}
-                    className="block px-4 py-2 rounded-lg mt-1 bg-red-600 hover:bg-red-700 text-white transition-colors cursor-pointer"
+                    className="block px-4 py-2 rounded-lg mt-1 bg-red-600 hover:bg-red-700 text-white transition-colors"
                   >
                     Logout
                   </button>
@@ -112,9 +114,75 @@ function Navbar() {
               </Button>
             </div>
           )}
-        </ul>
-      </nav>
-    </div>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none mx-2"
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+        >
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-gray-800 text-white px-4 py-4 space-y-4">
+          <Link
+            to="/"
+            className="block hover:text-blue-500 transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/courses"
+            className="block hover:text-blue-500 transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Courses
+          </Link>
+
+          {user ? (
+            <div className="flex flex-col gap-2">
+              <Link
+                to="/my-learning"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                My Learning
+              </Link>
+              <Link
+                to="/profile"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                View Profile
+              </Link>
+              <button
+                onClick={logoutHandler}
+                className="w-full text-left px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition-colors"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-3">
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
+                <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
+                  Login
+                </Link>
+              </Button>
+              <Button className="bg-gray-500 hover:bg-gray-600 text-white w-full">
+                <Link to="/signup" onClick={() => setMobileMenuOpen(false)}>
+                  Sign Up
+                </Link>
+              </Button>
+            </div>
+          )}
+        </div>
+      )}
+    </header>
   );
 }
 

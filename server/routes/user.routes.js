@@ -11,9 +11,10 @@ import upload from "../middlewares/multer.js";
 
 const router = express.Router();
 
+router.get("/", isAuthenticated);
 router.post("/register", userRegister);
 router.post("/login", userLogin);
-router.get("/logout", isAuthenticated, userLogOut);
+router.get("/logout", userLogOut);
 router.get("/profile", isAuthenticated, getUserProfile);
 
 router.put(
