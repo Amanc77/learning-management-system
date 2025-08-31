@@ -20,6 +20,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import CourseTable from "./pages/admin/Course/CourseTable";
 import AddCourse from "./pages/admin/Course/AddCourse";
 import PageNotFound from "./components/PageNotFound";
+import EditCourse from "./pages/admin/Course/EditCourse";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
           <Route path="courses" element={<CourseTable />} />
           <Route path="courses/create" element={<AddCourse />} />
+          <Route path="courses/:courseId" element={<EditCourse />} />
         </Route>
 
         {/* 404 Route */}

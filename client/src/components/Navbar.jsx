@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import axiosInstance from "@/utils/axiosInstance";
 import { toast } from "sonner";
 import { setUser } from "../redux/authSlice";
 
@@ -18,7 +18,7 @@ function Navbar() {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/user/logout", {
+      const res = await axiosInstance.get("/user/logout", {
         withCredentials: true,
       });
       if (res.data.success) {
@@ -45,7 +45,7 @@ function Navbar() {
 
   return (
     <header className="bg-gray-900 w-full border-b border-gray-800">
-      <div className=" mx-2 flex justify-between items-center px-2 h-14 lg:justify-between ">
+      <div className="mx-2 flex justify-between items-center px-2 h-14 lg:justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center text-white gap-2 mx-2">
           <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -61,6 +61,15 @@ function Navbar() {
             Courses
           </Link>
 
+          {user?.role === "instructor" && (
+            <Link
+              to="/admin/dashboard"
+              className="hover:text-blue-500 transition-colors"
+            >
+              Dashboard
+            </Link>
+          )}
+
           {user ? (
             <div
               className="relative flex items-center gap-3 mx-2"
@@ -75,7 +84,7 @@ function Navbar() {
                     src={user.photoUrl || "https://github.com/shadcn.png"}
                   />
                   <AvatarFallback>
-                    {user.name ? user.name[0].toUpperCase() : "U"}
+                    {user.name?.[0]?.toUpperCase() || "U"}
                   </AvatarFallback>
                 </Avatar>
               </button>
@@ -106,12 +115,16 @@ function Navbar() {
             </div>
           ) : (
             <div className="flex gap-3">
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                <Link to="/login">Login</Link>
-              </Button>
-              <Button className="bg-gray-500 hover:bg-gray-600 text-white">
-                <Link to="/signup">Sign Up</Link>
-              </Button>
+              <Link to="/login">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button className="bg-gray-500 hover:bg-gray-600 text-white">
+                  Sign Up
+                </Button>
+              </Link>
             </div>
           )}
         </nav>
@@ -168,16 +181,16 @@ function Navbar() {
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
-                <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/login">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
                   Login
-                </Link>
-              </Button>
-              <Button className="bg-gray-500 hover:bg-gray-600 text-white w-full">
-                <Link to="/signup" onClick={() => setMobileMenuOpen(false)}>
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button className="bg-gray-500 hover:bg-gray-600 text-white w-full">
                   Sign Up
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           )}
         </div>

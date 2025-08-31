@@ -31,7 +31,7 @@ function Login() {
     }
 
     try {
-      const response = await axiosInstance.post("/api/v1/user/login", input);
+      const response = await axiosInstance.post("/user/login", input);
 
       if (response.data.success) {
         toast.success(response.data.message || "Login successful!");

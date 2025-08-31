@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Label } from "../../../components/ui/label";
 import { Input } from "../../../components/ui/input";
 import { toast } from "sonner";
-
 import {
   Select,
   SelectContent,
@@ -21,18 +20,10 @@ function AddCourse() {
   const [courseTitle, setCourseTitle] = useState("");
   const [courseCategory, setCourseCategory] = useState("");
 
-  const getCourseTitle = (e) => {
-    console.log(courseTitle, " and ", courseCategory);
-  };
-
-  const getSelectedCategory = (value) => {
-    setCourseCategory(value);
-  };
-
   const handleCourseCreation = async (e) => {
     e.preventDefault();
     if (!courseTitle || !courseCategory) {
-      alert("course title and course category is require");
+      toast.error("Course title and category are required");
       return;
     }
     try {
@@ -41,11 +32,11 @@ function AddCourse() {
       formData.append("courseCategory", courseCategory.trim());
 
       const response = await axiosInstance.post(
-        "/api/v1/course/createCourse",
+        "/course/createCourse",
         formData
       );
       if (response.data.success) {
-        toast.success(response.data.message || "course Created successfully ");
+        toast.success(response.data.message || "Course created successfully!");
         navigate("/admin/courses");
       } else {
         toast.error(response.data.message || "Something went wrong");
@@ -54,48 +45,46 @@ function AddCourse() {
       toast.error(error.response?.data?.message || "Something went wrong");
     }
   };
+
   return (
-    <div className=" min-h-screen bg-gray-700 pt-5 pl-10">
-      <div className=" m-2  p-3  ">
-        <h1 className="text-2xl mt-5  flex  items-center">
-          Add course in dashboard by providing basic details
-        </h1>
-        <p className=" mt-2  ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-          ipsam?
+    <div className="min-h-screen bg-gray-800 px-4 py-6 sm:px-10 text-white">
+      <div className="mb-6">
+        <h1 className="text-2xl font-semibold">Add Course</h1>
+        <p className="text-gray-400 text-sm mt-2">
+          Provide basic details to create a new course.
         </p>
       </div>
-      <div className=" space-y-5">
-        <div className=" w-[500px] outline-none">
-          <Label className="mb-2 outline-none">Title</Label>
+
+      <div className="space-y-6 max-w-xl">
+        <div>
+          <Label className="mb-2 block">Course Title</Label>
           <Input
             type="text"
-            name="courseTitle"
-            placeholder="Your Course Name"
-            className="outline-none"
+            placeholder="Enter your course title"
             value={courseTitle}
             onChange={(e) => setCourseTitle(e.target.value)}
-          ></Input>
+            className="bg-gray-700 border-gray-600"
+          />
         </div>
 
         <div>
-          <Label>Category</Label>
-          <Select onValueChange={getSelectedCategory} className="bg-gray-700">
-            <SelectTrigger className="w-[180px] ">
-              <SelectValue placeholder="Select a Category" />
+          <Label className="mb-2 block">Category</Label>
+          <Select onValueChange={setCourseCategory}>
+            <SelectTrigger className="bg-gray-700 border-gray-600">
+              <SelectValue placeholder="Select a category" />
             </SelectTrigger>
-            <SelectContent className="bg-gray-600 text-amber-200  outline-none">
+            <SelectContent className="bg-gray-700 text-white">
               <SelectGroup>
                 <SelectLabel>Categories</SelectLabel>
-                <SelectItem value="Frontend development">
-                  Frontend development
+                <SelectItem value="Frontend Development">
+                  Frontend Development
                 </SelectItem>
-                <SelectItem value="Backend development">
-                  Backend development
+                <SelectItem value="Backend Development">
+                  Backend Development
                 </SelectItem>
                 <SelectItem value="Cyber Security">Cyber Security</SelectItem>
                 <SelectItem value="Data Analytics">Data Analytics</SelectItem>
-                <SelectItem value=" MERN FullStack Development">
+                <SelectItem value="MERN FullStack Development">
                   MERN FullStack Development
                 </SelectItem>
                 <SelectItem value="Data Science">Data Science</SelectItem>
@@ -106,14 +95,20 @@ function AddCourse() {
             </SelectContent>
           </Select>
         </div>
-        <div className=" flex gap-5">
+
+        <div className="flex flex-col sm:flex-row gap-4">
           <Button
             onClick={() => navigate("/admin/courses")}
-            className="bg-blue-500"
+            className="bg-red-500 hover:bg-red-600"
           >
-            Back
+            Cancel
           </Button>
-          <Button onClick={handleCourseCreation}>Create</Button>
+          <Button
+            onClick={handleCourseCreation}
+            className="bg-blue-600 hover:bg-blue-700"
+          >
+            Create Course
+          </Button>
         </div>
       </div>
     </div>

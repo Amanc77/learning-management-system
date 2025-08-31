@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import axiosInstance from "@/utils/axiosInstance";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,14 +21,12 @@ import {
 
 import { setUser } from "@/redux/authSlice";
 
-const API_BASE = "http://localhost:8000";
-
 const Profile = () => {
   const dispatch = useDispatch();
-  const { user } = useSelector((store) => store.auth); // Get current user from Redux store
+  const { user } = useSelector((store) => store.auth);
 
   const [open, setOpen] = useState(false);
-  const [submitting, setSubmitting] = useState(false); // Form submitting state
+  const [submitting, setSubmitting] = useState(false);
 
   const [input, setInput] = useState({
     name: user?.name ?? "",
@@ -36,7 +34,6 @@ const Profile = () => {
     file: null,
   });
 
-  // Sync local form state with Redux user changes
   useEffect(() => {
     setInput({
       name: user?.name ?? "",
@@ -45,7 +42,6 @@ const Profile = () => {
     });
   }, [user?.name, user?.description]);
 
-  // Determine source for profile photo, fallback user logo used if none exist
   const photoSrc = useMemo(
     () =>
       user?.photoUrl ||
@@ -57,7 +53,6 @@ const Profile = () => {
 
   const enrolledCourses = [1, 2, 3, 4];
 
-  // Handle form input changes including file validation for max 2MB
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "file") {
@@ -72,7 +67,6 @@ const Profile = () => {
     }
   };
 
-  // Form submission handler for profile update API call
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -90,21 +84,20 @@ const Profile = () => {
         formData.append("profilePhoto", input.file);
       }
 
-      const { data } = await axios.put(
-        `${API_BASE}/api/v1/user/profile/update`,
+      const { data } = await axiosInstance.put(
+        "/user/profile/update",
         formData,
         {
-          withCredentials: true, // Include cookies for authentication
+          headers: { "Content-Type": "multipart/form-data" },
         }
       );
 
-      // Update Redux store with new user data if returned
       if (data?.user) {
         dispatch(setUser(data.user));
       }
 
       alert(data?.message || "Profile updated successfully!");
-      setOpen(false); // Close dialog on success
+      setOpen(false);
     } catch (error) {
       console.error("Failed to update profile:", error);
       const msg =

@@ -4,23 +4,29 @@ import { Link, Outlet } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="flex min-h-screen  bg-gray-600 text-white">
-      <div className="w-[250px] sm:w-[300px] p-2">
-        <div className="m-2">
-          <Link to={"/admin/dashboard"} className="flex items-center gap-2.5">
-            <ChartNoAxesColumn size={28} />
-            <h1 className=" text-xl font-bold">Dashboard</h1>
+    <div className="flex min-h-screen bg-gray-900 text-white">
+      {/* Sidebar */}
+      <div className="w-56 sm:w-72 p-4 border-r border-gray-700">
+        <div className="space-y-4">
+          <Link
+            to="/admin/dashboard"
+            className="flex items-center gap-3 hover:text-blue-400"
+          >
+            <ChartNoAxesColumn size={24} />
+            <span className="font-semibold">Dashboard</span>
           </Link>
-        </div>
-        <div className="m-2">
-          <Link to={"/admin/courses"} className="flex items-center gap-2.5">
-            <SquareLibrary size={28} />
-            <h1 className=" text-xl font-bold">Course</h1>
+          <Link
+            to="/admin/courses"
+            className="flex items-center gap-3 hover:text-blue-400"
+          >
+            <SquareLibrary size={24} />
+            <span className="font-semibold">Courses</span>
           </Link>
         </div>
       </div>
 
-      <div className="flex-1 pt-12 pl-10 bg-gray-700 ">
+      {/* Main content */}
+      <div className="flex-1 bg-gray-800 p-4 sm:p-8">
         <Outlet />
       </div>
     </div>

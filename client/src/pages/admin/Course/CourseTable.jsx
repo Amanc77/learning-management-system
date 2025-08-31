@@ -1,107 +1,88 @@
-import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../../components/ui/button";
 import {
   Table,
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import axiosInstance from "@/utils/axiosInstance";
+import { Badge } from "../../../components/ui/badge";
+import { Edit } from "lucide-react";
 
 function CourseTable() {
-  const invoices = [
-    {
-      invoice: "INV001",
-      paymentStatus: "Paid",
-      totalAmount: "$250.00",
-      paymentMethod: "Credit Card",
-    },
-    {
-      invoice: "INV002",
-      paymentStatus: "Pending",
-      totalAmount: "$150.00",
-      paymentMethod: "PayPal",
-    },
-    {
-      invoice: "INV003",
-      paymentStatus: "Unpaid",
-      totalAmount: "$350.00",
-      paymentMethod: "Bank Transfer",
-    },
-    {
-      invoice: "INV004",
-      paymentStatus: "Paid",
-      totalAmount: "$450.00",
-      paymentMethod: "Credit Card",
-    },
-    {
-      invoice: "INV005",
-      paymentStatus: "Paid",
-      totalAmount: "$550.00",
-      paymentMethod: "PayPal",
-    },
-    {
-      invoice: "INV006",
-      paymentStatus: "Pending",
-      totalAmount: "$200.00",
-      paymentMethod: "Bank Transfer",
-    },
-    {
-      invoice: "INV007",
-      paymentStatus: "Unpaid",
-      totalAmount: "$300.00",
-      paymentMethod: "Credit Card",
-    },
-  ];
-
   const navigate = useNavigate();
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await axiosInstance.get("/course/getAllCourses");
+        setCourses(response.data.courses || []);
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    };
+    fetchCourses();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gray-700 p-4 text-white">
-      {/* Button */}
-      <div className="mb-6">
+    <div className="min-h-screen bg-gray-800 p-4 sm:p-8 text-white">
+      {/* Top action button */}
+      <div className="flex justify-end mb-6">
         <Button
-          onClick={() => {
-            navigate("create");
-          }}
+          onClick={() => navigate("create")}
+          className="bg-blue-600 hover:bg-blue-700"
         >
           Create a new Course
         </Button>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* Table */}
+      <div className="overflow-x-auto bg-gray-700 rounded-lg shadow">
         <Table>
-          <TableCaption>A list of your recent invoices.</TableCaption>
+          <TableCaption className="text-gray-400">
+            List of your courses
+          </TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Invoice</TableHead>
+              <TableHead className="w-[100px]">Price</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead>Title</TableHead>
+              <TableHead className="text-right">Action</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {invoices.map((invoice) => (
-              <TableRow key={invoice.invoice}>
-                <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                <TableCell>{invoice.paymentStatus}</TableCell>
-                <TableCell>{invoice.paymentMethod}</TableCell>
+            {courses.map((course) => (
+              <TableRow key={course._id}>
+                <TableCell>{course.coursePrice || "NA"}</TableCell>
+                <TableCell>
+                  <Badge
+                    className={
+                      course.isPublished ? "bg-green-600" : "bg-gray-500"
+                    }
+                  >
+                    {course.isPublished ? "Published" : "Draft"}
+                  </Badge>
+                </TableCell>
+                <TableCell>{course.courseTitle}</TableCell>
                 <TableCell className="text-right">
-                  {invoice.totalAmount}
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="hover:bg-gray-600"
+                    onClick={() => navigate(`${course._id}`)}
+                  >
+                    <Edit size={18} />
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
-          <TableFooter>
-            <TableRow>
-              <TableCell colSpan={3}>Total</TableCell>
-              <TableCell className="text-right">$2,500.00</TableCell>
-            </TableRow>
-          </TableFooter>
         </Table>
       </div>
     </div>

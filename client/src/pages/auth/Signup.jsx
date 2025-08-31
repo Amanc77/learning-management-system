@@ -29,7 +29,7 @@ function Signup() {
     }
 
     try {
-      const response = await axiosInstance.post("/api/v1/user/register", {
+      const response = await axiosInstance.post("/user/register", {
         ...user,
         name: user.name.trim(),
         email: user.email.trim(),
