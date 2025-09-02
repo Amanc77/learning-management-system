@@ -11,7 +11,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -25,7 +24,6 @@ import axiosInstance from "../../../utils/axiosInstance";
 function CourseTab() {
   const navigate = useNavigate();
   const { courseId } = useParams();
-  console.log("courseIdd", courseId);
 
   const [previewThumbnail, setPreviewThumbnail] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -40,7 +38,6 @@ function CourseTab() {
     courseThumbnail: null,
   });
 
-  // Fetch course data on mount
   useEffect(() => {
     const fetchCourse = async () => {
       try {
@@ -57,15 +54,17 @@ function CourseTab() {
             coursePrice,
             courseThumbnail,
           } = data.course;
+
           setInput({
-            courseTitle,
-            subTitle,
-            description,
-            category,
-            courseLevel,
-            coursePrice,
+            courseTitle: courseTitle || "",
+            subTitle: subTitle || "",
+            description: description || "",
+            category: category || "",
+            courseLevel: courseLevel || "",
+            coursePrice: String(coursePrice ?? ""),
             courseThumbnail: null,
           });
+
           setPreviewThumbnail(courseThumbnail || "");
         }
       } catch (error) {
@@ -77,28 +76,27 @@ function CourseTab() {
 
   const changeEventHandler = (e) => {
     const { name, value } = e.target;
-    setInput({ ...input, [name]: value });
+    setInput((prev) => ({ ...prev, [name]: value }));
   };
 
   const selectedCategory = (value) => {
-    setInput({ ...input, category: value });
+    setInput((prev) => ({ ...prev, category: value }));
   };
 
   const selectCourseLevel = (value) => {
-    setInput({ ...input, courseLevel: value });
+    setInput((prev) => ({ ...prev, courseLevel: value }));
   };
 
   const fileChangeHandler = (e) => {
     const file = e.target.files?.[0];
-    if (file) {
-      setInput({ ...input, courseThumbnail: file });
-      const fileReader = new FileReader();
-      fileReader.onloadend = () => setPreviewThumbnail(fileReader.result);
-      fileReader.readAsDataURL(file);
-    }
+    if (!file) return;
+    setInput((prev) => ({ ...prev, courseThumbnail: file }));
+
+    const reader = new FileReader();
+    reader.onloadend = () => setPreviewThumbnail(reader.result);
+    reader.readAsDataURL(file);
   };
 
-  // Update course
   const updateCourseHandler = async (e) => {
     e.preventDefault();
     setSubmitting(true);
@@ -121,7 +119,7 @@ function CourseTab() {
         { headers: { "Content-Type": "multipart/form-data" } }
       );
 
-      alert(data?.message || "Course updated successfully!");
+      alert(data?.message || "Course updated successfully");
       navigate("/admin/courses");
     } catch (error) {
       console.error("Failed to update course:", error);
@@ -131,7 +129,6 @@ function CourseTab() {
     }
   };
 
-  // Delete course
   const deleteCourseHandler = async () => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
 
@@ -139,7 +136,7 @@ function CourseTab() {
       const { data } = await axiosInstance.delete(
         `/course/deleteCourse/${courseId}`
       );
-      alert(data?.message || "Course deleted successfully!");
+      alert(data?.message || "Course deleted successfully");
       navigate("/admin/courses");
     } catch (error) {
       console.error("Failed to delete course:", error);
@@ -148,165 +145,167 @@ function CourseTab() {
   };
 
   const isPublished = false;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900  ">
-      <Card className="bg-gray-700/90 backdrop-blur-md text-white shadow-xl rounded-2xl border border-gray-600">
-        <CardHeader className="flex flex-col lg:flex-row justify-between gap-6">
+    <div className="mx-auto w-full ">
+      <Card className="bg-gray-900 text-white shadow-lg rounded-lg border border-gray-700">
+        <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <CardTitle className="text-2xl sm:text-3xl font-semibold">
-              Basic Course Information
-            </CardTitle>
-            <CardDescription className="text-blue-300 pt-2 text-sm sm:text-base">
-              Make changes to your course and click save when you’re done.
+            <CardDescription className="text-gray-400">
+              Update details about your course and save changes.
             </CardDescription>
           </div>
+
           <div className="flex gap-3 flex-wrap">
             <Button
               variant="outline"
-              className="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white hover:from-indigo-500 hover:to-indigo-600 rounded-xl shadow-md transition-all"
+              className="bg-green-600 hover:bg-green-700 text-white border-none"
             >
               {isPublished ? "Unpublish" : "Publish"}
             </Button>
             <Button
               onClick={deleteCourseHandler}
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-xl shadow-md transition-all"
+              className="bg-red-600 hover:bg-red-700 text-white"
             >
               Remove Course
             </Button>
           </div>
         </CardHeader>
 
-        <CardContent>
-          <div className="space-y-6 mt-5">
-            {/* Course Title */}
-            <div>
-              <Label className="mb-2 block text-gray-200">Course Title</Label>
-              <Input
-                type="text"
-                placeholder="Enter course title"
-                name="courseTitle"
-                value={input.courseTitle || ""}
-                onChange={changeEventHandler}
-                className="w-full bg-gray-800 border-gray-600 text-white rounded-xl focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+        <CardContent className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className="space-y-2">
+                <Label>Course Title</Label>
+                <Input
+                  type="text"
+                  name="courseTitle"
+                  value={input.courseTitle}
+                  onChange={changeEventHandler}
+                  placeholder="Enter course title"
+                  className="bg-gray-800 border-gray-700 text-white"
+                />
+              </div>
 
-            {/* Subtitle */}
-            <div>
-              <Label className="mb-2 block text-gray-200">Subtitle</Label>
-              <Input
-                type="text"
-                placeholder="Ex: Become a Full Stack developer from Zero to Hero."
-                name="subTitle"
-                value={input.subTitle || ""}
-                onChange={changeEventHandler}
-                className="w-full bg-gray-800 border-gray-600 text-white rounded-xl focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+              <div className="space-y-2">
+                <Label>Subtitle</Label>
+                <Input
+                  type="text"
+                  name="subTitle"
+                  value={input.subTitle}
+                  onChange={changeEventHandler}
+                  placeholder="Ex: Become a Full Stack developer"
+                  className="bg-gray-800 border-gray-700 text-white"
+                />
+              </div>
 
-            {/* Description */}
-            <div>
-              <Label className="mb-2 block text-gray-200">Description</Label>
-              <div className="bg-gray-800 rounded-xl p-2 border border-gray-600">
+              <div className="space-y-2">
+                <Label>Description</Label>
                 <RichTextEditor input={input} setInput={setInput} />
               </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                  <Label className="mb-1.5">Category</Label>
+                  <Select
+                    onValueChange={selectedCategory}
+                    value={input.category}
+                  >
+                    <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
+                      <SelectValue placeholder="Select category" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-gray-800 text-white border-gray-700">
+                      <SelectGroup>
+                        <SelectItem value="Data Analytics">
+                          Data Analytics
+                        </SelectItem>
+                        <SelectItem value="MERN FullStack Development">
+                          MERN FullStack Development
+                        </SelectItem>
+                        <SelectItem value="Data Science">
+                          Data Science
+                        </SelectItem>
+                        <SelectItem value="Artificial Intelligence">
+                          Artificial Intelligence
+                        </SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label className="mb-1.5">Course Level</Label>
+                  <Select
+                    onValueChange={selectCourseLevel}
+                    value={input.courseLevel}
+                    className=" "
+                  >
+                    <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
+                      <SelectValue placeholder="Select level" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-gray-800 text-white border-gray-700">
+                      <SelectGroup>
+                        <SelectItem value="Beginner">Beginner</SelectItem>
+                        <SelectItem value="Medium">Medium</SelectItem>
+                        <SelectItem value="Advance">Advance</SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <Label className="mb-1.5">Price (INR)</Label>
+                  <Input
+                    type="number"
+                    name="coursePrice"
+                    value={input.coursePrice}
+                    onChange={changeEventHandler}
+                    placeholder="199"
+                    className="bg-gray-800 border-gray-700 text-white"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Category, Level, Price */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Right */}
+            <div className="lg:col-span-1 space-y-4">
               <div>
-                <Label className="mb-2 block text-gray-200">Category</Label>
-                <Select onValueChange={selectedCategory} value={input.category}>
-                  <SelectTrigger className="bg-gray-800 border-gray-600 text-white rounded-xl focus:ring-2 focus:ring-blue-500">
-                    <SelectValue placeholder="Select a Category" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-gray-700 text-white rounded-xl">
-                    <SelectGroup>
-                      <SelectLabel>Select a Course</SelectLabel>
-                      <SelectItem value="Data Analytics">
-                        Data Analytics
-                      </SelectItem>
-                      <SelectItem value="MERN FullStack Development">
-                        MERN FullStack Development
-                      </SelectItem>
-                      <SelectItem value="Data Science">Data Science</SelectItem>
-                      <SelectItem value="Artificial Intelligence">
-                        Artificial Intelligence
-                      </SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
-                <Label className="mb-2  block text-gray-200">
-                  Course Level
-                </Label>
-                <Select
-                  onValueChange={selectCourseLevel}
-                  value={input.courseLevel}
-                >
-                  <SelectTrigger className="w-[200px] bg-gray-800 border-gray-600 text-white rounded-xl focus:ring-2 focus:ring-blue-500 scroll-none   scrollbar-hide">
-                    <SelectValue placeholder="Select a Level" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-gray-700 text-white rounded-xl">
-                    <SelectGroup className="scrollbar-hide">
-                      <SelectLabel>Select a Level</SelectLabel>
-                      <SelectItem value="Beginner">Beginner</SelectItem>
-                      <SelectItem value="Medium">Medium</SelectItem>
-                      <SelectItem value="Advance">Advance</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
-                <Label className="mb-2 block text-gray-200">Price (INR)</Label>
+                <Label>Course Thumbnail</Label>
                 <Input
-                  type="number"
-                  name="coursePrice"
-                  value={input.coursePrice || ""}
-                  onChange={changeEventHandler}
-                  placeholder="199"
-                  className="w-full bg-gray-800 border-gray-600 text-white rounded-xl focus:ring-2 focus:ring-blue-500"
+                  type="file"
+                  accept="image/*"
+                  onChange={fileChangeHandler}
+                  className="bg-gray-800 border-gray-700 text-white"
                 />
+                {previewThumbnail && (
+                  <div className="mt-4 border border-gray-700 rounded-lg overflow-hidden">
+                    <img
+                      src={previewThumbnail}
+                      alt="Course Thumbnail"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                )}
               </div>
-            </div>
-
-            {/* Thumbnail */}
-            <div>
-              <Label className="mb-2 block text-gray-200">
-                Course Thumbnail
-              </Label>
-              <Input
-                type="file"
-                accept="image/*"
-                className="w-[400px] bg-gray-600 border-gray-600 text-white rounded-xl  file:text-orange-500 file:font-bold "
-                onChange={fileChangeHandler}
-              />
-              {previewThumbnail && (
-                <img
-                  src={previewThumbnail}
-                  alt="Course Thumbnail"
-                  className="w-fit max-w-sm my-4 rounded-lg shadow-md border border-gray-600"
-                />
-              )}
+              <p className="text-sm text-gray-400">
+                Recommended ratio 16:9. Upload a clear, descriptive image.
+              </p>
             </div>
           </div>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <div className="flex justify-end gap-4">
             <Button
               onClick={() => navigate("/admin/courses")}
               variant="outline"
-              className="bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-400 hover:to-red-500 rounded-xl shadow-md transition-all"
+              className="border-gray-600 text-gray-300 bg-red-600 hover:bg-red-700"
             >
               Cancel
             </Button>
             <Button
               onClick={updateCourseHandler}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-xl shadow-md transition-all"
               disabled={submitting}
+              className="bg-blue-600 hover:bg-blue-700 text-white"
             >
               {submitting ? "Saving..." : "Save"}
             </Button>

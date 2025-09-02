@@ -14,6 +14,7 @@ import {
 import { Button } from "../../../components/ui/button";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "@/utils/axiosInstance";
+import BackButton from "../../../components/BackButton";
 
 function AddCourse() {
   const navigate = useNavigate();
@@ -49,7 +50,10 @@ function AddCourse() {
   return (
     <div className="min-h-screen bg-gray-800 px-4 py-6 sm:px-10 text-white">
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold">Add Course</h1>
+        <div className=" flex  gap-3">
+          <BackButton />
+          <h1 className="text-2xl font-semibold mt-1">Add Course</h1>
+        </div>
         <p className="text-gray-400 text-sm mt-2">
           Provide basic details to create a new course.
         </p>
@@ -66,14 +70,13 @@ function AddCourse() {
             className="bg-gray-700 border-gray-600"
           />
         </div>
-
         <div>
           <Label className="mb-2 block">Category</Label>
           <Select onValueChange={setCourseCategory}>
             <SelectTrigger className="bg-gray-700 border-gray-600">
               <SelectValue placeholder="Select a category" />
             </SelectTrigger>
-            <SelectContent className="bg-gray-700 text-white">
+            <SelectContent className="bg-gray-700 text-white max-h-60 overflow-auto">
               <SelectGroup>
                 <SelectLabel>Categories</SelectLabel>
                 <SelectItem value="Frontend Development">
@@ -82,14 +85,25 @@ function AddCourse() {
                 <SelectItem value="Backend Development">
                   Backend Development
                 </SelectItem>
-                <SelectItem value="Cyber Security">Cyber Security</SelectItem>
+                <SelectItem value="Data Structures & Algorithms">
+                  Data Structures & Algorithms
+                </SelectItem>
+                <SelectItem value="Artificial Intelligence">
+                  Artificial Intelligence
+                </SelectItem>
                 <SelectItem value="Data Analytics">Data Analytics</SelectItem>
+                <SelectItem value="Cyber Security">Cyber Security</SelectItem>
                 <SelectItem value="MERN FullStack Development">
                   MERN FullStack Development
                 </SelectItem>
-                <SelectItem value="Data Science">Data Science</SelectItem>
-                <SelectItem value="Artificial Intelligence">
-                  Artificial Intelligence
+                <SelectItem value="Mobile App Development">
+                  Mobile App Development
+                </SelectItem>
+                <SelectItem value="Cloud Computing">Cloud Computing</SelectItem>
+                <SelectItem value="DevOps">DevOps</SelectItem>
+                <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                <SelectItem value="Game Development">
+                  Game Development
                 </SelectItem>
               </SelectGroup>
             </SelectContent>

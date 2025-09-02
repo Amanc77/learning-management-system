@@ -7,6 +7,11 @@ import {
   getCreatorCourses,
   getCourseById,
   deleteCourse,
+  createLecture,
+  getCourseLecture,
+  updateLecture,
+  removeLecture,
+  getLectureById,
 } from "../controllers/course.controllers.js";
 
 const router = express.Router();
@@ -28,5 +33,19 @@ router.put(
   editCourse
 );
 router.delete("/deleteCourse/:courseId", isAuthenticated, deleteCourse);
+
+router.post("/:courseId/createLecture", isAuthenticated, createLecture);
+
+router.get("/:courseId/getCourseLecture", isAuthenticated, getCourseLecture);
+
+router.put(
+  "/:courseId/updateLecture/:lectureId",
+  isAuthenticated,
+  updateLecture
+);
+
+router.delete("/removeLecture/:lectureId", isAuthenticated, removeLecture);
+
+router.get("/getLectureById/:lectureId", isAuthenticated, getLectureById);
 
 export default router;

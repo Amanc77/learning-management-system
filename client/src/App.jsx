@@ -21,6 +21,8 @@ import CourseTable from "./pages/admin/Course/CourseTable";
 import AddCourse from "./pages/admin/Course/AddCourse";
 import PageNotFound from "./components/PageNotFound";
 import EditCourse from "./pages/admin/Course/EditCourse";
+import CreateLecture from "./pages/admin/lecture/CreateLecture";
+import UpdateLecture from "./pages/admin/lecture/UpdateLecture";
 
 function App() {
   return (
@@ -37,10 +39,14 @@ function App() {
 
         <Route path="/admin" element={<Sidebar />}>
           <Route path="dashboard" element={<Dashboard />} />
-
           <Route path="courses" element={<CourseTable />} />
           <Route path="courses/create" element={<AddCourse />} />
           <Route path="courses/:courseId" element={<EditCourse />} />
+          <Route path="courses/:courseId/lecture" element={<CreateLecture />} />
+          <Route
+            path="courses/:courseId/lecture/:lectureId"
+            element={<UpdateLecture />}
+          />
         </Route>
 
         {/* 404 Route */}

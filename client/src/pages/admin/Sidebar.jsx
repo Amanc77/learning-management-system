@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       {/* Sidebar */}
-      <div className="w-56 sm:w-72 p-4 border-r border-gray-700">
+      <div className="w-56 sm:w-72 p-4 bg-gray-820/85 border-r border-gray-700 ">
         <div className="space-y-4">
           <Link
             to="/admin/dashboard"
@@ -26,7 +26,7 @@ function Sidebar() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 bg-gray-800 p-4 sm:p-8">
+      <div className="flex-1 bg-gray-800 ">
         <Outlet />
       </div>
     </div>

@@ -1,31 +1,11 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "type": "module",
+  "name": "lms-root",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "build": " npm install && npm install --prefix client &&  npm run build --prefix client"
+    "build": "npm install --prefix client && npm run build --prefix client"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.10"
-  },
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "cloudinary": "^2.7.0",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.17.0",
-    "multer": "^2.0.2",
-    "paypal-rest-sdk": "^1.8.1"
+    "concurrently": "^9.0.0"
   }
 }

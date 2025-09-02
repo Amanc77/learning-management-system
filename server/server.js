@@ -1,40 +1,44 @@
 import dotenv from "dotenv";
-dotenv.config();
-
+import path from "path";
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import path from "path";
+
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.routes.js";
 import courseRoute from "./routes/course.routes.js";
+import mediaRoute from "./routes/media.route.js";
+
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 const __dirname = path.resolve();
 
-// CORS setup - very important for cookies to work cross-origin
+connectDB();
+
+// Middleware setup
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5174",
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   })
 );
-app.use(express.urlencoded({ extended: true }));
-
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-connectDB();
 
-// Routes
+// API routes
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/course", courseRoute);
+app.use("/api/v1/media", mediaRoute);
 
-// Serve frontend production if needed
+// Serve frontend build in production
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "Client", "dist")));
+  const frontendPath = path.join(__dirname, "../client/dist");
+  app.use(express.static(frontendPath));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Client", "dist", "index.html"));
+    res.sendFile(path.resolve(frontendPath, "index.html"));
   });
 }
 
