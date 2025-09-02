@@ -271,7 +271,7 @@ function CourseTab() {
             {/* Right */}
             <div className="lg:col-span-1 space-y-4">
               <div>
-                <Label>Course Thumbnail</Label>
+                <Label className="mb-1.5">Course Thumbnail</Label>
                 <Input
                   type="file"
                   accept="image/*"
