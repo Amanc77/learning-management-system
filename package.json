@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "build": "npm install --prefix client && npm run build --prefix client"
+    "build": "cd client && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^9.0.0"
