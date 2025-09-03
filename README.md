@@ -118,5 +118,3 @@ npm run dev
 ## Contributing
 Feel free to fork this repo and make improvements. Pull requests are welcome!
 ```
-
-This file is ready to paste into GitHub as your `README.md` with only the **Render backend live link**.
