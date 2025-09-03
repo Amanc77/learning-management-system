@@ -1,48 +1,22 @@
-# Node.js
+# Node modules
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
+# Environment files
 .env
+.env.production
 
 # Logs
-logs/
 *.log
+logs/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# IDEs
-.vscode/
-.idea/
-
-# Build
-dist/
-build/
-
-# Frontend (React/Vite/etc.)
-*.env.local
-*.env.development
-*.env.production
-*.env.test
-
-# Cache
-.cache/
-.next/
-out/
-coverage/
-
-# Temporary files
-*.swp
-*.tmp
-
-# Uploaded files (e.g., profile pictures, course materials)
+# Uploaded files 
 uploads/
 public/uploads/
 
-# MongoDB dump files
-dump/
+# Cache
+.cache/
+coverage/
 
-# Optional - if using TypeScript
-*.tsbuildinfo
+# IDE files
+.vscode/
+.idea/
