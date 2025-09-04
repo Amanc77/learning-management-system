@@ -21,3 +21,4 @@ coverage/
 .vscode/
 .idea/
 server/.env
+server/.env
