@@ -6,19 +6,24 @@ const initialState = {
 };
 
 const authSlice = createSlice({
-  name: "authSlice",
+  name: "auth",
   initialState,
   reducers: {
-    setUser: (state, action) => {
-      state.user = action.payload;
-    },
     userLoggedIn: (state, action) => {
       state.user = action.payload.user;
       state.isAuthenticated = true;
     },
-    userLoggedOut: (state, action) => {
+    userLoggedOut: (state) => {
       state.user = null;
       state.isAuthenticated = false;
+
+      // ✅ remove persisted storage manually
+      localStorage.removeItem("persist:root");
+      sessionStorage.removeItem("persist:root");
+    },
+    setUser: (state, action) => {
+      state.user = action.payload;
+      state.isAuthenticated = !!action.payload;
     },
   },
 });

@@ -4,7 +4,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "../../../components/ui/card";
 import {
   Select,
@@ -20,14 +19,15 @@ import { Input } from "../../../components/ui/input";
 import RichTextEditor from "../../../components/RichTextEditor";
 import { useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "../../../utils/axiosInstance";
+import { toast } from "sonner";
 
-function CourseTab() {
+const CourseTab = () => {
   const navigate = useNavigate();
   const { courseId } = useParams();
 
   const [previewThumbnail, setPreviewThumbnail] = useState("");
   const [submitting, setSubmitting] = useState(false);
-
+  const [coursePublishStatus, setCoursePublishStatus] = useState(false);
   const [input, setInput] = useState({
     courseTitle: "",
     subTitle: "",
@@ -35,16 +35,20 @@ function CourseTab() {
     category: "",
     courseLevel: "",
     coursePrice: "",
+    isPublished: "",
+
     courseThumbnail: null,
   });
 
+  // Fetch course by ID
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const { data } = await axiosInstance.get(
+        const response = await axiosInstance.get(
           `/course/getCourse/${courseId}`
         );
-        if (data?.course) {
+        console.log(response.data);
+        if (response.data?.success && response.data.course) {
           const {
             courseTitle,
             subTitle,
@@ -52,16 +56,19 @@ function CourseTab() {
             category,
             courseLevel,
             coursePrice,
-            courseThumbnail,
-          } = data.course;
+            isPublished,
 
+            courseThumbnail,
+          } = response.data.course;
           setInput({
             courseTitle: courseTitle || "",
             subTitle: subTitle || "",
             description: description || "",
             category: category || "",
             courseLevel: courseLevel || "",
-            coursePrice: String(coursePrice ?? ""),
+            coursePrice: coursePrice || "",
+            isPublished: isPublished || false,
+
             courseThumbnail: null,
           });
 
@@ -71,6 +78,7 @@ function CourseTab() {
         console.error("Failed to fetch course:", error);
       }
     };
+
     fetchCourse();
   }, [courseId]);
 
@@ -85,6 +93,12 @@ function CourseTab() {
 
   const selectCourseLevel = (value) => {
     setInput((prev) => ({ ...prev, courseLevel: value }));
+  };
+  const publishStatusHandler = () => {
+    setInput((prev) => ({
+      ...prev,
+      isPublished: !prev.isPublished,
+    }));
   };
 
   const fileChangeHandler = (e) => {
@@ -109,6 +123,7 @@ function CourseTab() {
       formData.append("category", input.category);
       formData.append("courseLevel", input.courseLevel);
       formData.append("coursePrice", input.coursePrice);
+      formData.append("isPublished", input.isPublished);
       if (input.courseThumbnail) {
         formData.append("courseThumbnail", input.courseThumbnail);
       }
@@ -119,11 +134,11 @@ function CourseTab() {
         { headers: { "Content-Type": "multipart/form-data" } }
       );
 
-      alert(data?.message || "Course updated successfully");
+      toast(data?.message || "Course updated successfully");
       navigate("/admin/courses");
     } catch (error) {
       console.error("Failed to update course:", error);
-      alert(error?.response?.data?.message || "Failed to update course");
+      toast(error?.response?.data?.message || "Failed to update course");
     } finally {
       setSubmitting(false);
     }
@@ -136,15 +151,13 @@ function CourseTab() {
       const { data } = await axiosInstance.delete(
         `/course/deleteCourse/${courseId}`
       );
-      alert(data?.message || "Course deleted successfully");
+      toast(data?.message || "Course deleted successfully");
       navigate("/admin/courses");
     } catch (error) {
       console.error("Failed to delete course:", error);
-      alert(error?.response?.data?.message || "Failed to delete course");
+      toast(error?.response?.data?.message || "Failed to delete course");
     }
   };
-
-  const isPublished = false;
 
   return (
     <div className="mx-auto w-full ">
@@ -158,10 +171,11 @@ function CourseTab() {
 
           <div className="flex gap-3 flex-wrap">
             <Button
+              onClick={publishStatusHandler}
               variant="outline"
               className="bg-green-600 hover:bg-green-700 text-white border-none"
             >
-              {isPublished ? "Unpublish" : "Publish"}
+              {input.isPublished ? "Unpublish" : "Publish"}
             </Button>
             <Button
               onClick={deleteCourseHandler}
@@ -239,7 +253,6 @@ function CourseTab() {
                   <Select
                     onValueChange={selectCourseLevel}
                     value={input.courseLevel}
-                    className=" "
                   >
                     <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
                       <SelectValue placeholder="Select level" />
@@ -314,6 +327,6 @@ function CourseTab() {
       </Card>
     </div>
   );
-}
+};
 
 export default CourseTab;

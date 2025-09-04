@@ -1,6 +1,9 @@
 import { useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import axiosInstance from "./utils/axiosInstance";
+
+import { setUser, userLoggedOut } from "./redux/authSlice";
 import "./App.css";
 
 import Navbar from "@/components/Navbar";
@@ -23,6 +26,7 @@ import PageNotFound from "./components/PageNotFound";
 import EditCourse from "./pages/admin/Course/EditCourse";
 import CreateLecture from "./pages/admin/lecture/CreateLecture";
 import UpdateLecture from "./pages/admin/lecture/UpdateLecture";
+import CourseDetails from "./pages/student/CourseDetails";
 
 function App() {
   return (
@@ -48,6 +52,7 @@ function App() {
             element={<UpdateLecture />}
           />
         </Route>
+        <Route path="/course-detail/:courseId" element={<CourseDetails />} />
 
         {/* 404 Route */}
         <Route path="*" element={<PageNotFound />} />

@@ -34,6 +34,8 @@ function CourseTable() {
     fetchCourses();
   }, []);
 
+  console.log(courses);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white p-4 sm:p-6">
       <div className="mx-auto max-w-6xl">

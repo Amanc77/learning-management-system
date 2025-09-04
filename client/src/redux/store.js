@@ -1,6 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authSlice from "./authSlice";
-
 import {
   persistReducer,
   FLUSH,
@@ -18,9 +17,18 @@ const persistConfig = {
   storage,
 };
 
-const rootReducer = combineReducers({
+const combinedReducers = combineReducers({
   auth: authSlice,
 });
+
+// ✅ Reset whole state when logout action is dispatched
+const rootReducer = (state, action) => {
+  if (action.type === "auth/userLoggedOut") {
+    storage.removeItem("persist:root"); // clear persisted storage
+    return combinedReducers(undefined, action); // reset state
+  }
+  return combinedReducers(state, action);
+};
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

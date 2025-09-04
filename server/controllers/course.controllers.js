@@ -120,6 +120,7 @@ export const editCourse = async (req, res) => {
       courseLevel,
       subTitle,
       description,
+      isPublished,
     } = req.body;
 
     const thumbnail = req.file;
@@ -146,6 +147,7 @@ export const editCourse = async (req, res) => {
         courseCategory,
         courseLevel,
         coursePrice,
+        isPublished,
         courseThumbnail,
       },
       { new: true }
@@ -324,5 +326,32 @@ export const getLectureById = async (req, res) => {
     return res
       .status(500)
       .json({ success: false, message: "Failed to get lecture by Id." });
+  }
+};
+
+export const togglePublicCourse = async (req, res) => {
+  try {
+    const courseId = req.params;
+    const { publish } = req.query;
+    const course = await Course.findById(courseId);
+    if (!course) {
+      return res
+        .status(404)
+        .json({ success: false, message: "course not found" });
+    }
+
+    course.isPublished = publish === "true";
+    course.save();
+
+    const statusMessage = course.isPublished ? "Published" : "UnPublished";
+    return res.status(200).json({
+      success: true,
+      message: `course is ${statusMessage}`,
+    });
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Failed to update status" });
   }
 };

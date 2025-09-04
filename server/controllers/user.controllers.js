@@ -2,6 +2,7 @@ import { User } from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import { deleteMediaFromCloudinary, uploadMedia } from "../utils/cloudinary.js";
 import { generateToken } from "../utils/generateToken.js";
+import jwt from "jsonwebtoken";
 
 export const userRegister = async (req, res) => {
   try {
@@ -39,79 +40,85 @@ export const userRegister = async (req, res) => {
     });
   }
 };
+
 export const userLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password)
-      return res.status(400).json({
-        success: false,
-        message: "All fields are required",
-      });
+      return res
+        .status(400)
+        .json({ success: false, message: "All fields are required" });
 
     const user = await User.findOne({ email });
     if (!user)
-      return res.status(400).json({
-        success: false,
-        message: "Incorrect email or password",
-      });
+      return res
+        .status(400)
+        .json({ success: false, message: "Incorrect email or password" });
 
-    const isPasswordMatch = await bcrypt.compare(password, user.password);
-    if (!isPasswordMatch)
-      return res.status(400).json({
-        success: false,
-        message: "Incorrect email or password",
-      });
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch)
+      return res
+        .status(400)
+        .json({ success: false, message: "Incorrect email or password" });
 
-    const token = generateToken(res, user, `Welcome back ${user.name}`);
-    // console.log("token in userController..", token);
-    return token;
-  } catch (error) {
-    console.error("Login error:", error);
-    return res.status(500).json({
-      success: false,
-      message: "Failed to Login",
+    const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, {
+      expiresIn: "1d",
     });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      maxAge: 24 * 60 * 60 * 1000,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: `Welcome back ${user.name}`,
+      user: user,
+    });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: "Failed to Login" });
   }
 };
 
-export const userLogOut = async (__, res) => {
+export const userLogOut = async (_, res) => {
   try {
-    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
-      message: "Logged out Successfully",
-      success: true,
-    });
+    return res
+      .status(200)
+      .cookie("token", "", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+        maxAge: 0,
+      })
+      .json({ success: true, message: "Logged out Successfully" });
   } catch (error) {
-    console.log(error);
-    return res.status(500).json({
-      success: false,
-      message: "Failed to Logout",
-    });
+    return res
+      .status(500)
+      .json({ success: false, message: "Failed to Logout" });
   }
 };
 
 export const getUserProfile = async (req, res) => {
   try {
     const userId = req.id;
-    const user = await User.findOne(userId).select("-password");
-    if (!user) {
-      return res.status(401).json({
-        message: "user not found",
-        success: false,
-      });
-    }
-    return res.status(200).json({
-      success: true,
-      message: "user found..",
-      user,
-    });
+    const user = await User.findById(userId).select("-password");
+    if (!user)
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+
+    return res
+      .status(200)
+      .json({ success: true, message: "User fetched", user });
   } catch (error) {
-    console.log(error);
-    return res.status(401).json({
-      success: false,
-      message: "Failed to get user profile..",
-    });
+    return res
+      .status(500)
+      .json({ success: false, message: "Failed to get user profile" });
   }
 };
+
 export const updateProfile = async (req, res) => {
   try {
     const userId = req.id;

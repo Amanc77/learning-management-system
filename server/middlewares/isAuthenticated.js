@@ -16,7 +16,7 @@ export const isAuthenticated = (req, res, next) => {
       return res.status(401).json({ success: false, message: "Invalid token" });
     }
 
-    req.id = decoded.userId;
+    req.id = decoded.id;
     next();
   } catch (error) {
     console.error("Auth error:", error.message);

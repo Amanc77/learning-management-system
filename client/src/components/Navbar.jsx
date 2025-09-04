@@ -32,6 +32,7 @@ function Navbar() {
     }
   };
 
+  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -46,13 +47,11 @@ function Navbar() {
   return (
     <header className="bg-gray-900 w-full border-b border-gray-800">
       <div className="mx-2 flex justify-between items-center px-2 h-14 lg:justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center text-white gap-2 mx-2">
           <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />
           <h1 className="text-xl sm:text-2xl font-bold">LMS</h1>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-white text-lg font-bold">
           <Link to="/" className="hover:text-blue-500 transition-colors">
             Home
@@ -76,7 +75,7 @@ function Navbar() {
               ref={dropdownRef}
             >
               <button
-                onClick={() => setDropdownOpen((prev) => !prev)}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="focus:outline-none"
               >
                 <Avatar className="w-12 h-12">
@@ -88,6 +87,7 @@ function Navbar() {
                   </AvatarFallback>
                 </Avatar>
               </button>
+
               {dropdownOpen && (
                 <div className="absolute right-0 top-full mt-3 w-56 rounded-xl shadow-2xl bg-gray-700 text-white py-3 px-2 flex flex-col gap-2 z-50">
                   <Link
@@ -129,16 +129,14 @@ function Navbar() {
           )}
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white focus:outline-none mx-2"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-gray-800 text-white px-4 py-4 space-y-4">
           <Link

@@ -12,6 +12,8 @@ import {
   updateLecture,
   removeLecture,
   getLectureById,
+  togglePublicCourse,
+  getPublishedCourse,
 } from "../controllers/course.controllers.js";
 
 const router = express.Router();
@@ -21,6 +23,7 @@ router.post("/createCourse", isAuthenticated, createCourse);
 
 // Get all creator courses
 router.get("/getAllCourses", isAuthenticated, getCreatorCourses);
+router.get("/publishedCourses", isAuthenticated, getPublishedCourse);
 
 // Get course by ID
 router.get("/getCourse/:courseId", isAuthenticated, getCourseById);
@@ -47,5 +50,5 @@ router.put(
 router.delete("/removeLecture/:lectureId", isAuthenticated, removeLecture);
 
 router.get("/getLectureById/:lectureId", isAuthenticated, getLectureById);
-
+router.put("/:courseId", isAuthenticated, togglePublicCourse);
 export default router;
