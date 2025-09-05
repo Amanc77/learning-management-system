@@ -1,200 +1,251 @@
-import React, { useState, useRef, useEffect } from "react";
-import { GraduationCap, Menu, X } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  GraduationCap,
+  Menu,
+  X,
+  BookOpen,
+  Settings,
+  LogOut,
+} from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useDispatch, useSelector } from "react-redux";
 import axiosInstance from "@/utils/axiosInstance";
 import { toast } from "sonner";
 import { setUser } from "../redux/authSlice";
 
-function Navbar() {
+const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user } = useSelector((store) => store.auth);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const dropdownRef = useRef();
+  const { user } = useSelector((s) => s.auth || {});
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [panelOpen, setPanelOpen] = useState(false);
+  const panelRef = useRef();
+
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === "Escape") setPanelOpen(false);
+    }
+    function onClick(e) {
+      if (
+        panelOpen &&
+        panelRef.current &&
+        !panelRef.current.contains(e.target)
+      ) {
+        setPanelOpen(false);
+      }
+    }
+    if (panelOpen) {
+      document.addEventListener("mousedown", onClick);
+      document.addEventListener("keydown", onKey);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [panelOpen]);
 
   const logoutHandler = async () => {
     try {
       const res = await axiosInstance.get("/user/logout", {
         withCredentials: true,
       });
-      if (res.data.success) {
+      if (res.data?.success) {
         dispatch(setUser(null));
-        toast.success(res.data.message);
-        setDropdownOpen(false);
+        toast.success(res.data.message || "Logged out");
+        setPanelOpen(false);
         navigate("/");
       }
-    } catch (error) {
-      toast.error(error.response?.data?.message || "Logout failed");
+    } catch (err) {
+      toast.error(err?.response?.data?.message || "Logout failed");
     }
   };
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
+  const dashboardLink =
+    user?.role === "instructor" ? "/admin/dashboard" : "/my-learning";
+
+  const handleToggle = () => {
+    if (user) {
+      setPanelOpen((p) => !p);
+    } else {
+      setMobileOpen((p) => !p);
     }
-    if (dropdownOpen)
-      document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [dropdownOpen]);
+  };
+
+  const isOpen = user ? panelOpen : mobileOpen;
 
   return (
-    <header className="bg-gray-900 w-full border-b border-gray-800">
-      <div className="mx-2 flex justify-between items-center px-2 h-14 lg:justify-between">
-        <Link to="/" className="flex items-center text-white gap-2 mx-2">
-          <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10" />
+    <header className="bg-gray-900 w-full border-b border-gray-800 shadow-md">
+      <div className="mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-13">
+        <Link to="/" className="flex items-center text-white gap-2">
+          <GraduationCap className="w-10 h-10 sm:w-10 sm:h-10" />
           <h1 className="text-xl sm:text-2xl font-bold">LMS</h1>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-white text-lg font-bold">
-          <Link to="/" className="hover:text-blue-500 transition-colors">
-            Home
-          </Link>
-          <Link to="/courses" className="hover:text-blue-500 transition-colors">
-            Courses
-          </Link>
-
-          {user?.role === "instructor" && (
-            <Link
-              to="/admin/dashboard"
-              className="hover:text-blue-500 transition-colors"
-            >
-              Dashboard
-            </Link>
-          )}
-
+        <nav className="hidden md:flex items-center gap-6 text-white text-lg font-semibold">
           {user ? (
-            <div
-              className="relative flex items-center gap-3 mx-2"
-              ref={dropdownRef}
-            >
-              <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="focus:outline-none"
+            <>
+              <Link
+                to="/"
+                className="hover:text-blue-400 transition-colors py-2"
               >
-                <Avatar className="w-12 h-12">
-                  <AvatarImage
-                    src={user.photoUrl || "https://github.com/shadcn.png"}
-                  />
-                  <AvatarFallback>
-                    {user.name?.[0]?.toUpperCase() || "U"}
-                  </AvatarFallback>
-                </Avatar>
-              </button>
-
-              {dropdownOpen && (
-                <div className="absolute right-0 top-full mt-3 w-56 rounded-xl shadow-2xl bg-gray-700 text-white py-3 px-2 flex flex-col gap-2 z-50">
-                  <Link
-                    to="/my-learning"
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    My Learning
-                  </Link>
-                  <Link
-                    to="/profile"
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    View Profile
-                  </Link>
-                  <button
-                    onClick={logoutHandler}
-                    className="block px-4 py-2 rounded-lg mt-1 bg-red-600 hover:bg-red-700 text-white transition-colors"
-                  >
-                    Logout
-                  </button>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="flex gap-3">
-              <Link to="/login">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white">
-                  Login
-                </Button>
+                Home
               </Link>
-              <Link to="/signup">
-                <Button className="bg-gray-500 hover:bg-gray-600 text-white">
-                  Sign Up
-                </Button>
+              <Link
+                to="/courses"
+                className="hover:text-blue-400 transition-colors py-2"
+              >
+                Courses
+              </Link>
+              <Link
+                to={dashboardLink}
+                className="hover:text-blue-400 transition-colors py-2"
+              >
+                Dashboard
+              </Link>
+              <button
+                onClick={() => setPanelOpen(true)}
+                className="ml-4 focus:outline-none"
+              >
+                <img
+                  src={user?.photoUrl || "https://github.com/shadcn.png"}
+                  alt={user?.name || "User"}
+                  className="w-11 h-11 rounded-full border-2 border-white hover:border-blue-400 transition"
+                />
+              </button>
+            </>
+          ) : (
+            <div className="flex gap-4">
+              <Link to="/login" className="hover:text-blue-400 py-2">
+                Login
+              </Link>
+              <Link to="/signup" className="hover:text-blue-400 py-2">
+                Sign Up
               </Link>
             </div>
           )}
         </nav>
 
+        {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-white focus:outline-none mx-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={handleToggle}
+          className="md:hidden text-gray-200 focus:outline-none p-2 hover:bg-gray-800 rounded"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 text-white px-4 py-4 space-y-4">
+      {/* Mobile Menu for non-logged-in users */}
+      {mobileOpen && !user && (
+        <div className="md:hidden bg-gray-900 border-t border-gray-800 px-4 py-3">
           <Link
-            to="/"
-            className="block hover:text-blue-500 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => setMobileOpen(false)}
+            to="/login"
+            className="block py-3 text-gray-200 hover:text-white border-b border-gray-800"
           >
-            Home
+            Login
           </Link>
           <Link
-            to="/courses"
-            className="block hover:text-blue-500 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => setMobileOpen(false)}
+            to="/signup"
+            className="block py-3 text-gray-200 hover:text-white border-b border-gray-800"
           >
-            Courses
+            Sign Up
           </Link>
+        </div>
+      )}
 
-          {user ? (
-            <div className="flex flex-col gap-2">
+      {/* Account Side Panel */}
+      {user && (
+        <div
+          className={`fixed top-0 right-0 h-full w-80 bg-gray-900 text-white shadow-lg z-50 transform transition-transform duration-300 ${
+            panelOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          aria-hidden={!panelOpen}
+        >
+          <div ref={panelRef} className="h-full flex flex-col">
+            <Link to="/profile">
+              <div className="flex items-start justify-between p-4 border-b border-gray-800">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={user?.photoUrl || "https://github.com/shadcn.png"}
+                    alt={user?.name || "User"}
+                    className="w-12 h-12 rounded-full border border-gray-700"
+                  />
+                  <div>
+                    <div className="font-semibold text-white">
+                      {user?.name || "Guest"}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      {user?.email || ""}
+                    </div>
+                    <div className="text-xs mt-1 inline-flex items-center gap-2 text-blue-400">
+                      <span className="inline-block w-2 h-2 rounded-full bg-blue-400" />
+                      <span>
+                        {user?.role === "instructor" ? "Instructor" : "Student"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setPanelOpen(false)}
+                  className="p-2 rounded-full hover:bg-gray-800"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </Link>
+
+            <div className="p-4 space-y-2 flex-1 overflow-auto">
               <Link
-                to="/my-learning"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                to="/"
+                onClick={() => setPanelOpen(false)}
+                className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-gray-800"
               >
-                My Learning
+                <BookOpen size={18} />
+                <span>Home</span>
+              </Link>
+              <Link
+                to="/courses"
+                onClick={() => setPanelOpen(false)}
+                className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-gray-800"
+              >
+                <BookOpen size={18} />
+                <span>Courses</span>
+              </Link>
+              <Link
+                to={dashboardLink}
+                onClick={() => setPanelOpen(false)}
+                className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-gray-800"
+              >
+                <BookOpen size={18} />
+                <span>Dashboard</span>
               </Link>
               <Link
                 to="/profile"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={() => setPanelOpen(false)}
+                className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-gray-800"
               >
-                View Profile
+                <Settings size={18} />
+                <span>Account Settings</span>
               </Link>
+            </div>
+
+            <div className="p-4 border-t border-gray-800">
               <button
                 onClick={logoutHandler}
-                className="w-full text-left px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 transition"
               >
-                Logout
+                <LogOut size={16} />
+                <span>Sign Out</span>
               </button>
             </div>
-          ) : (
-            <div className="flex flex-col gap-3">
-              <Link to="/login">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
-                  Login
-                </Button>
-              </Link>
-              <Link to="/signup">
-                <Button className="bg-gray-500 hover:bg-gray-600 text-white w-full">
-                  Sign Up
-                </Button>
-              </Link>
-            </div>
-          )}
+          </div>
         </div>
       )}
     </header>
   );
-}
+};
 
 export default Navbar;

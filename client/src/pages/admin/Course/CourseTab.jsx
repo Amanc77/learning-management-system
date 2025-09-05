@@ -27,7 +27,6 @@ const CourseTab = () => {
 
   const [previewThumbnail, setPreviewThumbnail] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [coursePublishStatus, setCoursePublishStatus] = useState(false);
   const [input, setInput] = useState({
     courseTitle: "",
     subTitle: "",
@@ -35,19 +34,16 @@ const CourseTab = () => {
     category: "",
     courseLevel: "",
     coursePrice: "",
-    isPublished: "",
-
+    isPublished: false,
     courseThumbnail: null,
   });
 
-  // Fetch course by ID
   useEffect(() => {
     const fetchCourse = async () => {
       try {
         const response = await axiosInstance.get(
           `/course/getCourse/${courseId}`
         );
-        console.log(response.data);
         if (response.data?.success && response.data.course) {
           const {
             courseTitle,
@@ -57,7 +53,6 @@ const CourseTab = () => {
             courseLevel,
             coursePrice,
             isPublished,
-
             courseThumbnail,
           } = response.data.course;
           setInput({
@@ -68,17 +63,14 @@ const CourseTab = () => {
             courseLevel: courseLevel || "",
             coursePrice: coursePrice || "",
             isPublished: isPublished || false,
-
             courseThumbnail: null,
           });
-
           setPreviewThumbnail(courseThumbnail || "");
         }
       } catch (error) {
         console.error("Failed to fetch course:", error);
       }
     };
-
     fetchCourse();
   }, [courseId]);
 
@@ -94,18 +86,15 @@ const CourseTab = () => {
   const selectCourseLevel = (value) => {
     setInput((prev) => ({ ...prev, courseLevel: value }));
   };
+
   const publishStatusHandler = () => {
-    setInput((prev) => ({
-      ...prev,
-      isPublished: !prev.isPublished,
-    }));
+    setInput((prev) => ({ ...prev, isPublished: !prev.isPublished }));
   };
 
   const fileChangeHandler = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
     setInput((prev) => ({ ...prev, courseThumbnail: file }));
-
     const reader = new FileReader();
     reader.onloadend = () => setPreviewThumbnail(reader.result);
     reader.readAsDataURL(file);
@@ -114,26 +103,16 @@ const CourseTab = () => {
   const updateCourseHandler = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-
     try {
       const formData = new FormData();
-      formData.append("courseTitle", input.courseTitle);
-      formData.append("subTitle", input.subTitle);
-      formData.append("description", input.description);
-      formData.append("category", input.category);
-      formData.append("courseLevel", input.courseLevel);
-      formData.append("coursePrice", input.coursePrice);
-      formData.append("isPublished", input.isPublished);
-      if (input.courseThumbnail) {
-        formData.append("courseThumbnail", input.courseThumbnail);
-      }
-
+      Object.keys(input).forEach((key) => {
+        if (input[key] !== null) formData.append(key, input[key]);
+      });
       const { data } = await axiosInstance.put(
         `/course/editCourse/${courseId}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
-
       toast(data?.message || "Course updated successfully");
       navigate("/admin/courses");
     } catch (error) {
@@ -146,7 +125,6 @@ const CourseTab = () => {
 
   const deleteCourseHandler = async () => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
-
     try {
       const { data } = await axiosInstance.delete(
         `/course/deleteCourse/${courseId}`
@@ -160,16 +138,13 @@ const CourseTab = () => {
   };
 
   return (
-    <div className="mx-auto w-full ">
+    <div className="mx-auto w-full p-4 sm:p-6">
       <Card className="bg-gray-900 text-white shadow-lg rounded-lg border border-gray-700">
         <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <CardDescription className="text-gray-400">
-              Update details about your course and save changes.
-            </CardDescription>
-          </div>
-
-          <div className="flex gap-3 flex-wrap">
+          <CardDescription className="text-gray-400">
+            Update details about your course and save changes.
+          </CardDescription>
+          <div className="flex gap-2 flex-wrap">
             <Button
               onClick={publishStatusHandler}
               variant="outline"
@@ -186,10 +161,10 @@ const CourseTab = () => {
           </div>
         </CardHeader>
 
-        <CardContent className="space-y-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left */}
-            <div className="lg:col-span-2 space-y-6">
+        <CardContent className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Left: Inputs */}
+            <div className="lg:col-span-2 space-y-4">
               <div className="space-y-2">
                 <Label>Course Title</Label>
                 <Input
@@ -219,7 +194,7 @@ const CourseTab = () => {
                 <RichTextEditor input={input} setInput={setInput} />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div>
                   <Label className="mb-1.5">Category</Label>
                   <Select
@@ -231,17 +206,42 @@ const CourseTab = () => {
                     </SelectTrigger>
                     <SelectContent className="bg-gray-800 text-white border-gray-700">
                       <SelectGroup>
+                        <SelectItem value="Frontend Development">
+                          Frontend Development
+                        </SelectItem>
+                        <SelectItem value="Backend Development">
+                          Backend Development
+                        </SelectItem>
+                        <SelectItem value="Data Structures & Algorithms">
+                          Data Structures & Algorithms
+                        </SelectItem>
+                        <SelectItem value="Java Developer">
+                          Java Developer
+                        </SelectItem>
+                        <SelectItem value="Artificial Intelligence">
+                          Artificial Intelligence
+                        </SelectItem>
                         <SelectItem value="Data Analytics">
                           Data Analytics
+                        </SelectItem>
+                        <SelectItem value="Cyber Security">
+                          Cyber Security
                         </SelectItem>
                         <SelectItem value="MERN FullStack Development">
                           MERN FullStack Development
                         </SelectItem>
-                        <SelectItem value="Data Science">
-                          Data Science
+                        <SelectItem value="Mobile App Development">
+                          Mobile App Development
                         </SelectItem>
-                        <SelectItem value="Artificial Intelligence">
-                          Artificial Intelligence
+                        <SelectItem value="Cloud Computing">
+                          Cloud Computing
+                        </SelectItem>
+                        <SelectItem value="DevOps">DevOps</SelectItem>
+                        <SelectItem value="UI/UX Design">
+                          UI/UX Design
+                        </SelectItem>
+                        <SelectItem value="Game Development">
+                          Game Development
                         </SelectItem>
                       </SelectGroup>
                     </SelectContent>
@@ -281,7 +281,7 @@ const CourseTab = () => {
               </div>
             </div>
 
-            {/* Right */}
+            {/* Right: Thumbnail */}
             <div className="lg:col-span-1 space-y-4">
               <div>
                 <Label className="mb-1.5">Course Thumbnail</Label>
@@ -307,18 +307,19 @@ const CourseTab = () => {
             </div>
           </div>
 
-          <div className="flex justify-end gap-4">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-end gap-3">
             <Button
               onClick={() => navigate("/admin/courses")}
               variant="outline"
-              className="border-gray-600 text-gray-300 bg-red-600 hover:bg-red-700"
+              className="border-gray-600 text-gray-300 bg-red-600 hover:bg-red-700 w-full sm:w-auto"
             >
               Cancel
             </Button>
             <Button
               onClick={updateCourseHandler}
               disabled={submitting}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"
             >
               {submitting ? "Saving..." : "Save"}
             </Button>

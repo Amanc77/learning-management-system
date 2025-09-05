@@ -88,6 +88,7 @@ function AddCourse() {
                 <SelectItem value="Data Structures & Algorithms">
                   Data Structures & Algorithms
                 </SelectItem>
+                <SelectItem value="Java Developer">Java Developer</SelectItem>
                 <SelectItem value="Artificial Intelligence">
                   Artificial Intelligence
                 </SelectItem>

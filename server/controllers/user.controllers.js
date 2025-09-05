@@ -49,7 +49,9 @@ export const userLogin = async (req, res) => {
         .status(400)
         .json({ success: false, message: "All fields are required" });
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select(
+      "name email photoUrl role password"
+    );
     if (!user)
       return res
         .status(400)
@@ -72,10 +74,18 @@ export const userLogin = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000,
     });
 
+    const userData = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      photoUrl: user.photoUrl || null,
+    };
+
     return res.status(200).json({
       success: true,
       message: `Welcome back ${user.name}`,
-      user: user,
+      user: userData,
     });
   } catch (error) {
     return res.status(500).json({ success: false, message: "Failed to Login" });

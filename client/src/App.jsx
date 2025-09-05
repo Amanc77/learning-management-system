@@ -27,6 +27,7 @@ import EditCourse from "./pages/admin/Course/EditCourse";
 import CreateLecture from "./pages/admin/lecture/CreateLecture";
 import UpdateLecture from "./pages/admin/lecture/UpdateLecture";
 import CourseDetails from "./pages/student/CourseDetails";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
 
         <Route path="/profile" element={<Profile />} />
         <Route path="/my-learning" element={<MyLearning />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route path="/admin" element={<Sidebar />}>
           <Route path="dashboard" element={<Dashboard />} />
