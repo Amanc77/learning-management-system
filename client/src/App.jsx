@@ -28,6 +28,7 @@ import CreateLecture from "./pages/admin/lecture/CreateLecture";
 import UpdateLecture from "./pages/admin/lecture/UpdateLecture";
 import CourseDetails from "./pages/student/CourseDetails";
 import Contact from "./components/Contact";
+import CourseProgress from "./pages/student/CourseProgress";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           />
         </Route>
         <Route path="/course-detail/:courseId" element={<CourseDetails />} />
+        <Route path="/course-progress/:courseId" element={<CourseProgress />} />
 
         {/* 404 Route */}
         <Route path="*" element={<PageNotFound />} />

@@ -1,3 +1,4 @@
+import BuyCourseButton from "@/components/BuyCourseButton";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,107 +9,183 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { BadgeInfo, Lock, PlayCircle } from "lucide-react";
-import React from "react";
+import { BadgeInfo, Lock, PlayCircle, Users, Layers } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
+import { useNavigate, useParams } from "react-router-dom";
+import axiosInstance from "../../utils/axiosInstance";
 
-const CourseDetails = () => {
+const CourseDetail = () => {
+  const { courseId } = useParams();
+  const navigate = useNavigate();
+  const [course, setCourse] = useState(null);
+  const [purchased, setPurchased] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCourse = async () => {
+      try {
+        setLoading(true);
+        const res = await axiosInstance.get(
+          `/purchase/course/${courseId}/details-with-status`
+        );
+        if (res.data?.success) {
+          setCourse(res.data.data.course);
+          setPurchased(res.data.data.purchased);
+        } else {
+          setError("Failed to load course details.");
+        }
+      } catch (err) {
+        setError("Failed to load course details. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (courseId) fetchCourse();
+  }, [courseId]);
+
+  const handleContinueCourse = () => {
+    if (purchased) navigate(`/course-progress/${courseId}`);
+  };
+
+  if (loading)
+    return (
+      <div className="max-w-7xl mx-auto py-8 px-4 text-white">Loading...</div>
+    );
+  if (error || !course)
+    return (
+      <div className="max-w-7xl mx-auto py-8 px-4 text-red-500">
+        {error || "Course not found."}
+      </div>
+    );
+
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200">
-      {/* Header */}
-      <div className="bg-gray-800 text-white shadow-md">
-        <div className="max-w-7xl mx-auto py-8 px-4 md:px-8 flex flex-col gap-3">
-          <h1 className="font-extrabold text-2xl md:text-4xl bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Full Stack Web Development Bootcamp
+    <div className="bg-gray-900 min-h-screen text-white">
+      <div className="bg-gray-800 border-b border-gray-700">
+        <div className="max-w-7xl mx-auto py-8 px-4 md:px-8 flex flex-col gap-2">
+          <h1 className="font-bold text-2xl md:text-3xl">
+            {course.courseTitle}
           </h1>
           <p className="text-base md:text-lg text-gray-300">
-            Learn MERN stack from scratch to advanced.
+            {course.subTitle || "Course Subtitle"}
           </p>
           <p>
             Created By{" "}
-            <span className="text-indigo-400 underline italic hover:text-indigo-300 transition">
-              Aman Sharma
+            <span className="text-indigo-400 underline italic">
+              {course.creator?.name || "Unknown Creator"}
             </span>
           </p>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <BadgeInfo size={16} />
-            <p>Last updated 2025-09-04</p>
+          <div className="flex items-center gap-4 text-sm text-gray-400 flex-wrap">
+            <span className="flex items-center gap-1">
+              <BadgeInfo size={16} /> Last updated{" "}
+              {course.updatedAt
+                ? new Date(course.updatedAt).toLocaleDateString()
+                : "Unknown"}
+            </span>
+            <span className="flex items-center gap-1">
+              <Users size={16} /> {course.enrolledStudents?.length || 0}{" "}
+              students enrolled
+            </span>
+            <span className="flex items-center gap-1">
+              <Layers size={16} /> Level: {course.courseLevel || "Beginner"}
+            </span>
           </div>
-          <p className="text-gray-400">Students enrolled: 120</p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto py-6 px-4 md:px-8 flex flex-col lg:flex-row gap-10">
-        {/* Left Section */}
+      <div className="max-w-7xl mx-auto my-6 px-4 md:px-8 flex flex-col lg:flex-row justify-between gap-10">
         <div className="w-full lg:w-2/3 space-y-6">
-          <h1 className="font-bold text-xl md:text-2xl text-white">
-            Description
-          </h1>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            This course will teach you how to build modern full-stack web
-            applications using MongoDB, Express, React, and Node.js. You will
-            learn both frontend and backend development, deployment, and real
-            project workflows.
-          </p>
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-white">Description</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p
+                className="text-sm text-gray-300 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: course.description || "No description available.",
+                }}
+              />
+            </CardContent>
+          </Card>
 
-          <Card className="bg-gray-800 border border-gray-700 text-gray-200 rounded-2xl shadow-md">
+          <Card className="bg-gray-800 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white">Course Content</CardTitle>
               <CardDescription className="text-gray-400">
-                4 lectures
+                {course.lectures?.length || 0} lecture
+                {course.lectures?.length !== 1 ? "s" : ""}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              {[
-                "Introduction to Web Development",
-                "Getting Started with React",
-                "Backend with Node & Express",
-                "Database with MongoDB",
-              ].map((lecture, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 text-sm p-2 rounded-lg hover:bg-gray-700 transition"
-                >
-                  <span>
-                    {idx === 0 ? (
-                      <PlayCircle size={16} className="text-indigo-400" />
-                    ) : (
-                      <Lock size={16} className="text-gray-500" />
-                    )}
-                  </span>
-                  <p>{lecture}</p>
-                </div>
-              ))}
+              {course.lectures?.length ? (
+                course.lectures.map((lecture, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-3 text-sm text-gray-300"
+                  >
+                    <span>
+                      {purchased || idx === 0 ? (
+                        <PlayCircle size={16} className="text-green-400" />
+                      ) : (
+                        <Lock size={16} className="text-red-400" />
+                      )}
+                    </span>
+                    <p>{lecture.lectureTitle || `Lecture ${idx + 1}`}</p>
+                  </div>
+                ))
+              ) : (
+                <p className="text-gray-400">No lectures available yet.</p>
+              )}
             </CardContent>
           </Card>
         </div>
 
-        {/* Right Section (Sticky Video Preview) */}
-        <div className="w-full lg:w-1/3 lg:sticky lg:top-6 h-fit">
-          <Card className="bg-gray-800 border border-gray-700 text-gray-200 rounded-2xl shadow-lg">
+        <div className="w-full lg:w-1/3">
+          <Card className="bg-gray-800 border-gray-700">
             <CardContent className="p-4 flex flex-col">
-              <div className="w-full aspect-video mb-4 rounded-lg overflow-hidden shadow-md">
-                <ReactPlayer
-                  width="100%"
-                  height="100%"
-                  url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  controls={true}
-                />
+              <div className="w-full aspect-video mb-4 rounded-lg overflow-hidden">
+                {course.lectures?.[0]?.videoUrl ? (
+                  <ReactPlayer
+                    width="100%"
+                    height="100%"
+                    url={course.lectures[0].videoUrl}
+                    controls
+                  />
+                ) : course.courseThumbnail ? (
+                  <img
+                    src={course.courseThumbnail}
+                    alt="Course Thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                    <p className="text-gray-400">No preview available</p>
+                  </div>
+                )}
               </div>
-              <h1 className="text-lg font-semibold text-white">
-                Lecture Preview
-              </h1>
-              <Separator className="my-2 bg-gray-700" />
+
               <h1 className="text-lg md:text-xl font-semibold text-white">
-                Course Price
+                Course Price:{" "}
+                {course.coursePrice ? `₹${course.coursePrice}` : "Free"}
               </h1>
-              <p className="text-indigo-400 font-bold text-2xl mt-1">₹499</p>
+
+              <Separator className="my-3 bg-gray-600" />
+
+              {purchased ? (
+                <Button
+                  onClick={() => navigate(`/course-progress/${courseId}`)}
+                  className="w-full bg-green-600 hover:bg-green-700"
+                >
+                  Continue Course
+                </Button>
+              ) : (
+                <BuyCourseButton courseId={courseId} />
+              )}
             </CardContent>
-            <CardFooter className="flex justify-center p-4">
-              <Button className="w-full bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-semibold text-lg">
-                Buy Course
-              </Button>
+            <CardFooter className="p-4 text-xs text-gray-500 text-center">
+              Category: {course.courseCategory || "N/A"}
             </CardFooter>
           </Card>
         </div>
@@ -117,4 +194,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default CourseDetail;

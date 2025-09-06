@@ -165,37 +165,38 @@ const Navbar = () => {
           aria-hidden={!panelOpen}
         >
           <div ref={panelRef} className="h-full flex flex-col">
-            <Link to="/profile">
-              <div className="flex items-start justify-between p-4 border-b border-gray-800">
-                <div className="flex items-center gap-3">
+            <div className="flex items-start justify-between p-4 border-b border-gray-800">
+              <div className="flex items-center gap-3">
+                <Link to="/profile">
                   <img
                     src={user?.photoUrl || "https://github.com/shadcn.png"}
                     alt={user?.name || "User"}
                     className="w-12 h-12 rounded-full border border-gray-700"
+                    onClick={() => setPanelOpen(false)}
                   />
-                  <div>
-                    <div className="font-semibold text-white">
-                      {user?.name || "Guest"}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {user?.email || ""}
-                    </div>
-                    <div className="text-xs mt-1 inline-flex items-center gap-2 text-blue-400">
-                      <span className="inline-block w-2 h-2 rounded-full bg-blue-400" />
-                      <span>
-                        {user?.role === "instructor" ? "Instructor" : "Student"}
-                      </span>
-                    </div>
+                </Link>
+                <div>
+                  <div className="font-semibold text-white">
+                    {user?.name || "Guest"}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {user?.email || ""}
+                  </div>
+                  <div className="text-xs mt-1 inline-flex items-center gap-2 text-blue-400">
+                    <span className="inline-block w-2 h-2 rounded-full bg-blue-400" />
+                    <span>
+                      {user?.role === "instructor" ? "Instructor" : "Student"}
+                    </span>
                   </div>
                 </div>
-                <button
-                  onClick={() => setPanelOpen(false)}
-                  className="p-2 rounded-full hover:bg-gray-800"
-                >
-                  <X size={18} />
-                </button>
               </div>
-            </Link>
+              <button
+                onClick={() => setPanelOpen(false)}
+                className="p-2 rounded-full hover:bg-gray-800"
+              >
+                <X size={18} />
+              </button>
+            </div>
 
             <div className="p-4 space-y-2 flex-1 overflow-auto">
               <Link

@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { setUser } from "@/redux/authSlice";
+import MyLearning from "./MyLearning";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -238,22 +239,7 @@ const Profile = () => {
       </div>
 
       <div>
-        {enrolledCourses.length === 0 ? (
-          <h2 className="flex text-white text-2xl items-center">
-            You haven't enrolled any course....
-          </h2>
-        ) : (
-          <>
-            <h2 className="flex justify-center text-white text-2xl items-center">
-              You are enrolled in these courses...
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-16 my-7 gap-8">
-              {enrolledCourses.map((course, index) => (
-                <Course key={index} course={course} />
-              ))}
-            </div>
-          </>
-        )}
+        <MyLearning />
       </div>
     </div>
   );

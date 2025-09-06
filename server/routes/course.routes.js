@@ -23,7 +23,7 @@ router.post("/createCourse", isAuthenticated, createCourse);
 
 // Get all creator courses
 router.get("/getAllCourses", isAuthenticated, getCreatorCourses);
-router.get("/publishedCourses", isAuthenticated, getPublishedCourse);
+router.get("/publishedCourses", getPublishedCourse);
 
 // Get course by ID
 router.get("/getCourse/:courseId", isAuthenticated, getCourseById);
