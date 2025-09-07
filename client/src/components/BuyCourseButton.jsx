@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import axiosInstance from "../utils/axiosInstance";
+import { useSelector } from "react-redux";
 
 export default function BuyCourseButton({ courseId }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { user } = useSelector((state) => state.auth || {});
 
   const loadRazorpayScript = () =>
     new Promise((resolve, reject) => {
@@ -23,6 +25,11 @@ export default function BuyCourseButton({ courseId }) {
     });
 
   const purchaseCourseHandler = async () => {
+    if (!user?._id) {
+      setError("You need to login first");
+      return;
+    }
+
     setLoading(true);
     setError("");
 
@@ -73,7 +80,6 @@ export default function BuyCourseButton({ courseId }) {
           contact,
         },
         handler: async function (response) {
-          // here verify payment with backend
           try {
             const verifyRes = await axiosInstance.post(
               "/purchase/verify-payment",

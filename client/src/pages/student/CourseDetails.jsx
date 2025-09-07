@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
+import LoadingPage from "@/components/LoadingPage"; // ✅ import LoadingPage
 
 const CourseDetail = () => {
   const { courseId } = useParams();
@@ -24,41 +25,62 @@ const CourseDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchCourse = async () => {
+    let cancelled = false;
+
+    const fetchAll = async () => {
+      setLoading(true);
+      setError(null);
+
+      //  get purchase status
       try {
-        setLoading(true);
         const res = await axiosInstance.get(
           `/purchase/course/${courseId}/details-with-status`
         );
-        if (res.data?.success) {
-          setCourse(res.data.data.course);
-          setPurchased(res.data.data.purchased);
-        } else {
-          setError("Failed to load course details.");
+        if (!cancelled && res.data?.success) {
+          setPurchased(!!res.data.data?.purchased);
         }
       } catch (err) {
-        setError("Failed to load course details. Please try again.");
+        if (!cancelled) setPurchased(false);
+      }
+
+      try {
+        const publishCourse = await axiosInstance.get(
+          `/course/getPublicCourseById/${courseId}`
+        );
+        if (publishCourse.data?.success) {
+          setCourse(publishCourse.data.course || []);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          const msg =
+            err?.response?.data?.message ||
+            err?.message ||
+            "Failed to load course.";
+          setError(msg);
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
-    if (courseId) fetchCourse();
+
+    if (courseId) fetchAll();
+
+    return () => {
+      cancelled = true;
+    };
   }, [courseId]);
 
-  const handleContinueCourse = () => {
-    if (purchased) navigate(`/course-progress/${courseId}`);
-  };
+  if (loading) {
+    return <LoadingPage />; // ✅ Show LoadingPage component
+  }
 
-  if (loading)
-    return (
-      <div className="max-w-7xl mx-auto py-8 px-4 text-white">Loading...</div>
-    );
-  if (error || !course)
+  if (error || !course) {
     return (
       <div className="max-w-7xl mx-auto py-8 px-4 text-red-500">
         {error || "Course not found."}
       </div>
     );
+  }
 
   return (
     <div className="bg-gray-900 min-h-screen text-white">
@@ -94,7 +116,7 @@ const CourseDetail = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto my-6 px-4 md:px-8 flex flex-col lg:flex-row justify-between gap-10">
+      <div className="max-w-7xl mx-auto mt-5 px-4 md:px-8 flex flex-col lg:flex-row justify-between gap-10">
         <div className="w-full lg:w-2/3 space-y-6">
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader>
@@ -110,7 +132,7 @@ const CourseDetail = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-800 border-gray-700">
+          <Card className="bg-gray-800 border-gray-700  mb-6">
             <CardHeader>
               <CardTitle className="text-white">Course Content</CardTitle>
               <CardDescription className="text-gray-400">
@@ -122,7 +144,7 @@ const CourseDetail = () => {
               {course.lectures?.length ? (
                 course.lectures.map((lecture, idx) => (
                   <div
-                    key={idx}
+                    key={lecture._id || idx}
                     className="flex items-center gap-3 text-sm text-gray-300"
                   >
                     <span>
@@ -146,13 +168,20 @@ const CourseDetail = () => {
           <Card className="bg-gray-800 border-gray-700">
             <CardContent className="p-4 flex flex-col">
               <div className="w-full aspect-video mb-4 rounded-lg overflow-hidden">
-                {course.lectures?.[0]?.videoUrl ? (
-                  <ReactPlayer
-                    width="100%"
-                    height="100%"
-                    url={course.lectures[0].videoUrl}
-                    controls
-                  />
+                {/* ✅ Purchased: show video preview | Not purchased: show thumbnail */}
+                {purchased ? (
+                  course.lectures?.[0]?.videoUrl ? (
+                    <ReactPlayer
+                      width="100%"
+                      height="100%"
+                      url={course.lectures[0].videoUrl}
+                      controls
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                      <p className="text-gray-400">No preview available</p>
+                    </div>
+                  )
                 ) : course.courseThumbnail ? (
                   <img
                     src={course.courseThumbnail}
@@ -171,7 +200,7 @@ const CourseDetail = () => {
                 {course.coursePrice ? `₹${course.coursePrice}` : "Free"}
               </h1>
 
-              <Separator className="my-3 bg-gray-600" />
+              <Separator className="bg-gray-600" />
 
               {purchased ? (
                 <Button

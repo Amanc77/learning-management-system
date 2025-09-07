@@ -14,6 +14,7 @@ import {
   getLectureById,
   togglePublicCourse,
   getPublishedCourse,
+  getPublicCourseById,
 } from "../controllers/course.controllers.js";
 
 const router = express.Router();
@@ -51,4 +52,6 @@ router.delete("/removeLecture/:lectureId", isAuthenticated, removeLecture);
 
 router.get("/getLectureById/:lectureId", isAuthenticated, getLectureById);
 router.put("/:courseId", isAuthenticated, togglePublicCourse);
+router.get("/getPublicCourseById/:courseId", getPublicCourseById);
+
 export default router;

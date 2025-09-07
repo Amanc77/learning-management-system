@@ -355,3 +355,30 @@ export const togglePublicCourse = async (req, res) => {
       .json({ success: false, message: "Failed to update status" });
   }
 };
+export const getPublicCourseById = async (req, res) => {
+  try {
+    const { courseId } = req.params;
+
+    const course = await Course.findOne({ _id: courseId, isPublished: true })
+      .populate("lectures")
+      .populate({ path: "creator", select: "name photoUrl" });
+
+    if (!course) {
+      return res.status(404).json({
+        success: false,
+        message: "Course not found or not published",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      course,
+    });
+  } catch (error) {
+    console.error("Error fetching public course:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Failed to fetch public course",
+    });
+  }
+};

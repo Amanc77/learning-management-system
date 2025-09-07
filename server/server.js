@@ -11,7 +11,7 @@ import courseRoute from "./routes/course.routes.js";
 import mediaRoute from "./routes/media.route.js";
 import coursePurchaseRoute from "./routes/purchaseCourse.route.js";
 import { razorpayWebhook } from "./controllers/purchasedCourse.controllers.js";
-
+import courseProgressRoute from "./routes/courseProgress.routes.js";
 dotenv.config({ path: "./.env" });
 
 const app = express();
@@ -44,6 +44,8 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/course", courseRoute);
 app.use("/api/v1/media", mediaRoute);
 app.use("/api/v1/purchase", coursePurchaseRoute);
+
+app.use("/api/v1/progress", courseProgressRoute);
 
 // Serve frontend build
 const frontendPath = path.join(__dirname, "../client/dist");

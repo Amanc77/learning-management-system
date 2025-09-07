@@ -117,6 +117,19 @@ const Navbar = () => {
             </>
           ) : (
             <div className="flex gap-4">
+              <Link
+                to="/"
+                className="hover:text-blue-400 transition-colors py-2"
+              >
+                Home
+              </Link>
+              <Link
+                to="/courses"
+                className="hover:text-blue-400 transition-colors py-2"
+              >
+                Courses
+              </Link>
+
               <Link to="/login" className="hover:text-blue-400 py-2">
                 Login
               </Link>
