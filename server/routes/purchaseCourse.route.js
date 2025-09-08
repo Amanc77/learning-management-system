@@ -5,6 +5,7 @@ import {
   createCheckoutSession,
   getAllPurchasedCourse,
   getCourseDetailWithPurchaseStatus,
+  getCoursePurchaseStatus,
   verifyPayment,
 } from "../controllers/purchasedCourse.controllers.js";
 
@@ -18,5 +19,10 @@ router.get(
   getCourseDetailWithPurchaseStatus
 );
 router.get("/purchased", isAuthenticated, getAllPurchasedCourse);
+router.get(
+  "/course/:courseId/status",
+  isAuthenticated,
+  getCoursePurchaseStatus
+);
 
 export default router;

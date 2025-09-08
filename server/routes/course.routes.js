@@ -16,7 +16,6 @@ import {
   getPublishedCourse,
   getPublicCourseById,
   searchCourse,
-  getCoursePurchaseStatus,
 } from "../controllers/course.controllers.js";
 
 const router = express.Router();
@@ -26,7 +25,6 @@ router.get("/getAllCourses", isAuthenticated, getCreatorCourses);
 router.get("/publishedCourses", getPublishedCourse);
 router.get("/search", searchCourse);
 router.get("/getCourse/:courseId", isAuthenticated, getCourseById);
-router.get("/:courseId/status", isAuthenticated, getCoursePurchaseStatus);
 router.put(
   "/editCourse/:courseId",
   isAuthenticated,

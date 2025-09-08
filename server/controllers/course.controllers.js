@@ -427,14 +427,3 @@ export const getPublicCourseById = async (req, res) => {
     });
   }
 };
-
-// get purchase status
-
-export const getCoursePurchaseStatus = async (req, res) => {
-  const userId = req.user._id;
-  const { courseId } = req.params;
-
-  const purchased = await Purchase.findOne({ user: userId, course: courseId });
-
-  res.json({ purchased: !!purchased });
-};

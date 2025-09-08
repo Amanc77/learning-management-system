@@ -359,3 +359,30 @@ export const getAllPurchasedCourse = async (req, res) => {
       .json({ success: false, message: "Internal Server Error" });
   }
 };
+
+export const getCoursePurchaseStatus = async (req, res) => {
+  try {
+    const { courseId } = req.params;
+    const userId = req.id;
+
+    if (!userId)
+      return res.status(401).json({ success: false, message: "Unauthorized" });
+    if (!isValidObjectId(courseId) || !isValidObjectId(userId))
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid course or user ID" });
+
+    const purchase = await CoursePurchase.findOne({
+      userId,
+      courseId,
+      status: "completed",
+    });
+
+    return res.status(200).json({ success: true, purchased: !!purchase });
+  } catch (error) {
+    console.error("getCoursePurchaseStatus:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
