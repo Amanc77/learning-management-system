@@ -4,10 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Course = ({ course }) => {
+const CourseCard = ({ course }) => {
   return (
     <Link to={`/course-detail/${course._id}`}>
-      <Card className="overflow-hidden rounded-xl bg-gray-800 border border-gray-800 hover:shadow-2xl hover:scale-[1.04] transition-all duration-300 p-0 pb-5">
+      <Card className="overflow-hidden rounded-xl bg-gray-800 border border-gray-800 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-[1.04] transition-all duration-300 p-0 pb-5">
         <div className="relative w-full h-56 overflow-hidden rounded-t-xl border-b border-gray-700 bg-black">
           <img
             src={course.courseThumbnail || course.image}
@@ -23,7 +23,7 @@ const Course = ({ course }) => {
 
           <div
             className="text-gray-400 text-sm line-clamp-2"
-            dangerouslySetInnerHTML={{ __html: course.description }} //fix <p> tag issue.
+            dangerouslySetInnerHTML={{ __html: course.description }}
           />
 
           <div className="flex items-center justify-between mt-2">
@@ -51,6 +51,7 @@ const Course = ({ course }) => {
             </Badge>
           </div>
 
+          {/* Price */}
           <div className="flex justify-between text-xl font-bold text-white pt-2">
             <span className="text-gray-300">Course Price</span>
             <span>
@@ -63,4 +64,4 @@ const Course = ({ course }) => {
   );
 };
 
-export default Course;
+export default CourseCard;

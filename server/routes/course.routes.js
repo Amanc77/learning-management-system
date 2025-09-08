@@ -15,21 +15,18 @@ import {
   togglePublicCourse,
   getPublishedCourse,
   getPublicCourseById,
+  searchCourse,
+  getCoursePurchaseStatus,
 } from "../controllers/course.controllers.js";
 
 const router = express.Router();
 
-// Create course
 router.post("/createCourse", isAuthenticated, createCourse);
-
-// Get all creator courses
 router.get("/getAllCourses", isAuthenticated, getCreatorCourses);
 router.get("/publishedCourses", getPublishedCourse);
-
-// Get course by ID
+router.get("/search", searchCourse);
 router.get("/getCourse/:courseId", isAuthenticated, getCourseById);
-
-// Edit course
+router.get("/:courseId/status", isAuthenticated, getCoursePurchaseStatus);
 router.put(
   "/editCourse/:courseId",
   isAuthenticated,
@@ -39,18 +36,15 @@ router.put(
 router.delete("/deleteCourse/:courseId", isAuthenticated, deleteCourse);
 
 router.post("/:courseId/createLecture", isAuthenticated, createLecture);
-
 router.get("/:courseId/getCourseLecture", isAuthenticated, getCourseLecture);
-
 router.put(
   "/:courseId/updateLecture/:lectureId",
   isAuthenticated,
   updateLecture
 );
-
 router.delete("/removeLecture/:lectureId", isAuthenticated, removeLecture);
-
 router.get("/getLectureById/:lectureId", isAuthenticated, getLectureById);
+
 router.put("/:courseId", isAuthenticated, togglePublicCourse);
 router.get("/getPublicCourseById/:courseId", getPublicCourseById);
 

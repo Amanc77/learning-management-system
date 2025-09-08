@@ -138,7 +138,7 @@ const CourseTab = () => {
   };
 
   return (
-    <div className="mx-auto w-full p-4 sm:p-6">
+    <div className="mx-auto w-full ">
       <Card className="bg-gray-900 text-white shadow-lg rounded-lg border border-gray-700">
         <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <CardDescription className="text-gray-400">
@@ -221,27 +221,14 @@ const CourseTab = () => {
                         <SelectItem value="Artificial Intelligence">
                           Artificial Intelligence
                         </SelectItem>
+                        <SelectItem value="MERN FullStack Development">
+                          MERN FullStack Development
+                        </SelectItem>
                         <SelectItem value="Data Analytics">
                           Data Analytics
                         </SelectItem>
                         <SelectItem value="Cyber Security">
                           Cyber Security
-                        </SelectItem>
-                        <SelectItem value="MERN FullStack Development">
-                          MERN FullStack Development
-                        </SelectItem>
-                        <SelectItem value="Mobile App Development">
-                          Mobile App Development
-                        </SelectItem>
-                        <SelectItem value="Cloud Computing">
-                          Cloud Computing
-                        </SelectItem>
-                        <SelectItem value="DevOps">DevOps</SelectItem>
-                        <SelectItem value="UI/UX Design">
-                          UI/UX Design
-                        </SelectItem>
-                        <SelectItem value="Game Development">
-                          Game Development
                         </SelectItem>
                       </SelectGroup>
                     </SelectContent>

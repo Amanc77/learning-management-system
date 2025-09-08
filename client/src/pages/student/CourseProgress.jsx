@@ -279,7 +279,7 @@ const CourseProgress = () => {
                       ) : (
                         <CirclePlay size={24} className="text-gray-400" />
                       )}
-                      <CardTitle className="text-lg font-medium text-gray-100">
+                      <CardTitle className=" text-sm lg:text-lg font-medium text-gray-100">
                         {lecture.lectureTitle}
                       </CardTitle>
                     </div>

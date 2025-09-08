@@ -89,23 +89,14 @@ function AddCourse() {
                   Data Structures & Algorithms
                 </SelectItem>
                 <SelectItem value="Java Developer">Java Developer</SelectItem>
+                <SelectItem value="MERN FullStack Development">
+                  MERN FullStack Development
+                </SelectItem>
                 <SelectItem value="Artificial Intelligence">
                   Artificial Intelligence
                 </SelectItem>
                 <SelectItem value="Data Analytics">Data Analytics</SelectItem>
                 <SelectItem value="Cyber Security">Cyber Security</SelectItem>
-                <SelectItem value="MERN FullStack Development">
-                  MERN FullStack Development
-                </SelectItem>
-                <SelectItem value="Mobile App Development">
-                  Mobile App Development
-                </SelectItem>
-                <SelectItem value="Cloud Computing">Cloud Computing</SelectItem>
-                <SelectItem value="DevOps">DevOps</SelectItem>
-                <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
-                <SelectItem value="Game Development">
-                  Game Development
-                </SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

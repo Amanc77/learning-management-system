@@ -32,39 +32,84 @@ export const createCourse = async (req, res) => {
   }
 };
 
-// Search course
+// search corse
 export const searchCourse = async (req, res) => {
   try {
-    const { query = "", categories = [], sortByPrice = "" } = req.query;
+    const {
+      query = "",
+      categories: rawCategories,
+      sortByPrice = "",
+      minPrice,
+      maxPrice,
+    } = req.query;
 
-    const searchCriteria = {
-      isPublished: true,
-      $or: [
-        { courseTitle: { $regex: query, $options: "i" } },
-        { subTitle: { $regex: query, $options: "i" } },
-        { courseCategory: { $regex: query, $options: "i" } },
-      ],
-    };
-
-    if (categories.length > 0) {
-      searchCriteria.courseCategory = { $in: categories };
+    // Parse categories
+    let categories = [];
+    if (rawCategories) {
+      if (Array.isArray(rawCategories)) categories = rawCategories;
+      else if (typeof rawCategories === "string") {
+        try {
+          const parsed = JSON.parse(rawCategories);
+          categories = Array.isArray(parsed) ? parsed : [parsed];
+        } catch {
+          categories = rawCategories
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean);
+        }
+      }
     }
 
-    const sortOptions = {};
-    if (sortByPrice === "low") sortOptions.coursePrice = 1;
-    if (sortByPrice === "high") sortOptions.coursePrice = -1;
+    const visibilityCond = { $or: [{ isPublished: true }, { isPublic: true }] };
+    const andConditions = [visibilityCond];
 
-    const courses = await Course.find(searchCriteria)
+    // Text search
+    if (query && query.trim()) {
+      const regex = { $regex: query.trim(), $options: "i" };
+      andConditions.push({
+        $or: [
+          { courseTitle: regex },
+          { subTitle: regex },
+          { courseCategory: regex },
+        ],
+      });
+    }
+
+    // Category filter
+    if (categories.length > 0) {
+      andConditions.push({ courseCategory: { $in: categories } });
+    }
+
+    // Price filter
+    const priceFilter = {};
+    if (minPrice) priceFilter.$gte = Number(minPrice);
+    if (maxPrice) priceFilter.$lte = Number(maxPrice);
+    if (Object.keys(priceFilter).length > 0) {
+      andConditions.push({ coursePrice: priceFilter });
+    }
+
+    // Combine conditions
+    const finalQuery =
+      andConditions.length === 1 ? andConditions[0] : { $and: andConditions };
+
+    // Sorting
+    const sortObj = {};
+    const s = String(sortByPrice || "").toLowerCase();
+    if (["low", "lowtohigh", "low-to-high"].includes(s))
+      sortObj.coursePrice = 1;
+    if (["high", "hightolow", "high-to-low"].includes(s))
+      sortObj.coursePrice = -1;
+
+    const courses = await Course.find(finalQuery)
       .populate({ path: "creator", select: "name photoUrl" })
-      .sort(sortOptions);
+      .sort(sortObj);
 
-    return res.status(200).json({
-      success: true,
-      courses: courses || [],
-    });
+    return res.status(200).json({ success: true, courses: courses || [] });
   } catch (error) {
     console.error("Error searching course:", error);
-    return res.status(500).json({ success: false, message: error.message });
+    return res
+      .status(500)
+      .json({ success: false, message: error.message || "Server error" });
   }
 };
 
@@ -381,4 +426,15 @@ export const getPublicCourseById = async (req, res) => {
       message: "Failed to fetch public course",
     });
   }
+};
+
+// get purchase status
+
+export const getCoursePurchaseStatus = async (req, res) => {
+  const userId = req.user._id;
+  const { courseId } = req.params;
+
+  const purchased = await Purchase.findOne({ user: userId, course: courseId });
+
+  res.json({ purchased: !!purchased });
 };

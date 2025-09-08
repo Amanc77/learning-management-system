@@ -71,7 +71,7 @@ const CourseDetail = () => {
   }, [courseId]);
 
   if (loading) {
-    return <LoadingPage />; // ✅ Show LoadingPage component
+    return <LoadingPage />;
   }
 
   if (error || !course) {
