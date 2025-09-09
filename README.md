@@ -1,34 +1,61 @@
-# Learning Management System (LMS)
 
-This is a full-stack Learning Management System project where users can register, log in, manage profiles, and instructors can create and manage courses and lectures.  
-The project is built using **React.js (frontend)** and **Node.js + Express.js + MongoDB (backend)**.  
+# 🎓 Learning Management System (LMS)
 
-The project is live here:-  ⚙️ [https://lms-ak.onrender.com](https://lms-ak.onrender.com)  
+> A fully-featured, full-stack **Learning Management System** where users can register, log in, purchase courses, track progress, and instructors can manage courses and lectures.  
+> Built with ❤️ using **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
 
-
-<img width="3062" height="1330" alt="image" src="https://github.com/user-attachments/assets/05615e65-6289-4296-a055-8baa72eafa8a" />
-
+🔗 Live Demo: [https://lms-ak.vercel.app/](https://lms-ak.vercel.app/)
 
 ---
 
-## Features 
+## 🚀 Project Overview
 
-- User Authentication with **JWT** and **bcrypt**
-- Frontend UI with **React.js** and **Tailwind CSS**
-- Backend APIs with **Node.js, Express.js, and MongoDB**
-- Secure **CORS** handling for client-server communication
-- Form handling and state management in React
-- User Profile Management (update name, description, and profile photo)
-- Instructor Features:
-  - Create, edit, and manage courses
-  - Create and edit lectures
-  - Publish and unpublish courses/lectures
-- Media upload support using **Cloudinary**
-- Cookie-based authentication for cross-domain access
+This project enables:
+- User Authentication (Students & Instructors)
+- Course Purchase with **Razorpay Integration**
+- Interactive Video Learning (Cloudinary & YouTube Support)
+- Instructor Course & Lecture Management
+- Real-time Course Progress Tracking
+- Course Search & Filter Functionality
+- Responsive UI for Desktop & Mobile
+
+- 
+[LMS-VideoDemo.webm](https://github.com/user-attachments/assets/2ffcfeaf-5e6c-49d3-99d3-f13eb036859b)
 
 ---
 
-## Tech Stack
+## Features
+
+### 🎯 Student Side:
+- Register & Login with **JWT** & **bcrypt**
+- Purchase Paid Courses using **Razorpay**
+- Update Profile (Name, Bio, Profile Picture)
+- View Enrolled Courses & Track Progress
+- Interactive Video Playback with progress auto-tracking
+- Search and Filter Courses
+- Responsive, Clean UI built with **Tailwind CSS**
+
+---
+
+### 👨‍🏫 Instructor Side:
+- Create, Edit, Delete Courses & Lectures
+- Publish/Unpublish Courses and Lectures
+- Upload Media Files using **Cloudinary**
+- Manage Students and Course Content
+
+---
+
+### ⚡ Global Features:
+- Role-based Access Control
+- Secure Cookie-based Authentication
+- Secure CORS Configuration
+- Error Handling & Loading Indicators
+- Responsive UI across devices
+- Razorpay Integration for Course Payments
+
+---
+
+## 🧱 Tech Stack
 
 **Frontend:**
 - React.js  
@@ -36,85 +63,73 @@ The project is live here:-  ⚙️ [https://lms-ak.onrender.com](https://lms-ak.
 - Axios  
 
 **Backend:**
-- Node.js  
-- Express.js  
+- Node.js + Express.js  
 - MongoDB + Mongoose  
-- JWT (JSON Web Token)  
-- bcrypt  
-- Cloudinary  
+- JWT & bcrypt  
+- Razorpay Payment Gateway  
+- Cloudinary for Media Uploads  
 
 ---
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
-### 1. Clone the Repository
-```
+### 1️⃣ Clone the Repository
 git clone https://github.com/Amanc77/learning-management-system.git
 cd learning-management-system
-```
 
-### 2. Install Dependencies
+### 2️⃣ Install Dependencies
 
-**Backend**
-```
+Backend
 cd server
 npm install
-```
 
-**Frontend**
-```
+Frontend
 cd ../client
 npm install
-```
 
-### 3. Configure Environment Variables  
+### 3️⃣ Configure Environment Variables
 
-Create a `.env` file inside the **server** folder with the following values:
+Create a .env file in the server folder:
 
-```
+```env
+# Server Configuration
 PORT=5000
 MONGO_URI=your_mongo_connection_string
+
+# Authentication
 JWT_SECRET=your_jwt_secret
 CLIENT_URL=http://localhost:5173
+
+# Cloudinary Configuration
 CLOUD_NAME=your_cloudinary_name
 API_KEY=your_cloudinary_api_key
 API_SECRET=your_cloudinary_api_secret
+
+# Razorpay Payment Gateway
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_SECRET=your_razorpay_secret
 ```
 
-### 4. Run the Project
+### 4️⃣ Run the Project
 
-**Backend**
-```
+Backend
 cd server
 npm run dev
-```
 
-**Frontend**
-```
+Frontend
 cd client
 npm run dev
-```
 
 ---
 
-## Current Status
-- ✅ Frontend completed  
-- ✅ User authentication completed  
-- ✅ Profile management completed  
-- ✅ Instructor course & lecture management completed  
-- ✅ Publish/unpublish functionality implemented  
 
-### Upcoming Features
-- Student dashboard and course progress tracking  
-- Advanced analytics for instructors  
-- 
----
-
-## GitHub Repository
-[https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
+Please Give a  GitHub ⭐️ : [https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
 
 ---
 
-## Contributing
-Feel free to fork this repo and make improvements. Pull requests are welcome!
-```
+## 🤝 Contributing
+
+Contributions are welcome!  
+Fork the repo ➔ Make your improvements ➔ Submit a Pull Request 🚀
+
+---
