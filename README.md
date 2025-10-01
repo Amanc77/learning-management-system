@@ -1,16 +1,18 @@
-
 # 🎓 Learning Management System (LMS)
 
 > A fully-featured, full-stack **Learning Management System** where users can register, log in, purchase courses, track progress, and instructors can manage courses and lectures.  
 > Built with ❤️ using **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
 
-🔗 Live Demo: [https://lms-ak.vercel.app/](https://lms-ak.vercel.app/)
+## 🔗 Live Demo: [https://lms-ak.vercel.app/](https://lms-ak.vercel.app/)
+
+## 🎥 Video Demo:[https://youtu.be/D29g4eM6nvM](https://youtu.be/D29g4eM6nvM)
 
 ---
 
 ## 🚀 Project Overview
 
 This project enables:
+
 - User Authentication (Students & Instructors)
 - Course Purchase with **Razorpay Integration**
 - Interactive Video Learning (Cloudinary & YouTube Support)
@@ -19,14 +21,14 @@ This project enables:
 - Course Search & Filter Functionality
 - Responsive UI for Desktop & Mobile
 
-- 
-[LMS-VideoDemo.webm](https://github.com/user-attachments/assets/2ffcfeaf-5e6c-49d3-99d3-f13eb036859b)
+- [LMS-VideoDemo.webm](https://github.com/user-attachments/assets/2ffcfeaf-5e6c-49d3-99d3-f13eb036859b)
 
 ---
 
 ## Features
 
 ### 🎯 Student Side:
+
 - Register & Login with **JWT** & **bcrypt**
 - Purchase Paid Courses using **Razorpay**
 - Update Profile (Name, Bio, Profile Picture)
@@ -38,6 +40,7 @@ This project enables:
 ---
 
 ### 👨‍🏫 Instructor Side:
+
 - Create, Edit, Delete Courses & Lectures
 - Publish/Unpublish Courses and Lectures
 - Upload Media Files using **Cloudinary**
@@ -46,6 +49,7 @@ This project enables:
 ---
 
 ### ⚡ Global Features:
+
 - Role-based Access Control
 - Secure Cookie-based Authentication
 - Secure CORS Configuration
@@ -58,22 +62,25 @@ This project enables:
 ## 🧱 Tech Stack
 
 **Frontend:**
-- React.js  
-- Tailwind CSS  
-- Axios  
+
+- React.js
+- Tailwind CSS
+- Axios
 
 **Backend:**
-- Node.js + Express.js  
-- MongoDB + Mongoose  
-- JWT & bcrypt  
-- Razorpay Payment Gateway  
-- Cloudinary for Media Uploads  
+
+- Node.js + Express.js
+- MongoDB + Mongoose
+- JWT & bcrypt
+- Razorpay Payment Gateway
+- Cloudinary for Media Uploads
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
+
 git clone https://github.com/Amanc77/learning-management-system.git
 cd learning-management-system
 
@@ -122,8 +129,7 @@ npm run dev
 
 ---
 
-
-Please Give a  GitHub ⭐️ : [https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
+Please Give a GitHub ⭐️ : [https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
 
 ---
 

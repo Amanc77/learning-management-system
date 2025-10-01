@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import axiosInstance from "../utils/axiosInstance";
 import { useSelector } from "react-redux";
+import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 export default function BuyCourseButton({ courseId }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { user } = useSelector((state) => state.auth || {});
+
+  const navigate = useNavigate();
 
   const loadRazorpayScript = () =>
     new Promise((resolve, reject) => {
@@ -27,6 +31,15 @@ export default function BuyCourseButton({ courseId }) {
   const purchaseCourseHandler = async () => {
     if (!user?._id) {
       setError("You need to login first");
+      toast.error("You need to login first", {
+        position: "bottom-right",
+        autoClose: 1000, // 3s
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "dark",
+      });
       return;
     }
 

@@ -64,7 +64,7 @@ export const userLogin = async (req, res) => {
         .json({ success: false, message: "Incorrect email or password" });
 
     const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, {
-      expiresIn: "1d",
+      expiresIn: "365d",
     });
 
     res.cookie("token", token, {

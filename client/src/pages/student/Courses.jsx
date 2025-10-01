@@ -15,6 +15,7 @@ function Courses() {
         if (res.data.success) {
           setCourses(res?.data?.courses || []);
         }
+        console.log(" fetch data are ", res.data);
       } catch (error) {
         console.log(error);
       } finally {
