@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import axiosInstance from "./utils/axiosInstance";
-import { setUser, userLoggedOut } from "./redux/authSlice";
+
 import "./App.css";
 
 import Navbar from "@/components/Navbar";
@@ -34,8 +32,10 @@ import UpdateLecture from "./pages/admin/lecture/UpdateLecture";
 
 import Contact from "./components/Contact";
 import PageNotFound from "./components/PageNotFound";
+import useAuthCheck from "./hooks/useAuthCheck";
 
 function App() {
+  useAuthCheck();
   return (
     <>
       <Navbar />

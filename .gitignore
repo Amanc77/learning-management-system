@@ -4,7 +4,8 @@ node_modules/
 # Environment files
 .env
 .env.production
-
+*.env
+.env.development
 # Logs
 *.log
 logs/
