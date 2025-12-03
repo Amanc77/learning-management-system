@@ -11,7 +11,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axiosInstance from "@/utils/axiosInstance";
 import { toast } from "sonner";
-import { setUser } from "../redux/authSlice";
+import { userLoggedOut } from "../redux/authSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -52,7 +52,7 @@ const Navbar = () => {
         withCredentials: true,
       });
       if (res.data?.success) {
-        dispatch(setUser(null));
+        dispatch(userLoggedOut());
         toast.success(res.data.message || "Logged out");
         setPanelOpen(false);
         navigate("/");
