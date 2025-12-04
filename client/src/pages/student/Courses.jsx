@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import { courses } from "./courseContent";
 import CourseCard from "./CourseCard";
 import axiosInstance from "../../utils/axiosInstance";
-import LoadingPage from "../../components/LoadingPage";
+import CourseCardSkeleton from "../../components/CourseCardSkeleton";
+
 function Courses() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,12 +22,9 @@ function Courses() {
         setLoading(false);
       }
     };
+
     fetchCourse();
   }, []);
-
-  if (loading) {
-    return <LoadingPage />;
-  }
 
   return (
     <div className="min-h-screen bg-gray-900 p-6">
@@ -39,16 +36,24 @@ function Courses() {
         This is where you can browse and enroll in courses.
       </p>
 
-      {/* Responsive Grid */}
-      {courses.length === 0 ? (
-        <p className="text-center text-gray-300 py-10">Course not found...</p>
-      ) : (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-8">
-          {courses.map((course, index) => (
-            <CourseCard key={index} course={course} />
-          ))}
-        </div>
-      )}
+      <div className="max-w-7xl mx-auto mt-8">
+        {loading ? (
+          // Skeleton grid while loading
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <CourseCardSkeleton key={index} />
+            ))}
+          </div>
+        ) : courses.length === 0 ? (
+          <p className="text-center text-gray-300 py-10">Course not found...</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {courses.map((course, index) => (
+              <CourseCard key={index} course={course} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

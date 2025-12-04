@@ -1,0 +1,738 @@
+[{
+  "_id": {
+    "$oid": "69302cd5caf86e80f0cda325"
+  },
+  "courseTitle": "Frontend development",
+  "courseCategory": "Frontend Development",
+  "courseLevel": "Medium",
+  "enrolledStudents": [
+    {
+      "$oid": "692f1ae348124d24fd021d97"
+    }
+  ],
+  "lectures": [
+    {
+      "$oid": "69311ad39631a5d2343cafad"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafae"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafaf"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb0"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb1"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb2"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb3"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb4"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb5"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb6"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb7"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb8"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafb9"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafba"
+    },
+    {
+      "$oid": "69311ad39631a5d2343cafbb"
+    }
+  ],
+  "creator": {
+    "$oid": "69302c8bcaf86e80f0cda313"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:28:05.502Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T05:32:55.589Z"
+  },
+  "__v": 0,
+  "coursePrice": 399,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765006/lvpcmszsuyri7ef9hyeh.webp",
+  "description": "<p>Learn frontend development from scratch </p>",
+  "subTitle": "Learn frontend development from scratch "
+},
+{
+  "_id": {
+    "$oid": "69302d69caf86e80f0cda34b"
+  },
+  "courseTitle": "Backend Development",
+  "courseCategory": "Backend Development",
+  "courseLevel": "Advance",
+  "enrolledStudents": [],
+  "lectures": [
+    {
+      "$oid": "693120939631a5d2343cafe6"
+    },
+    {
+      "$oid": "693120939631a5d2343cafe7"
+    },
+    {
+      "$oid": "693120939631a5d2343cafe8"
+    },
+    {
+      "$oid": "693120939631a5d2343cafe9"
+    },
+    {
+      "$oid": "693120939631a5d2343cafea"
+    },
+    {
+      "$oid": "693120939631a5d2343cafeb"
+    },
+    {
+      "$oid": "693120939631a5d2343cafec"
+    },
+    {
+      "$oid": "693120939631a5d2343cafed"
+    },
+    {
+      "$oid": "693120939631a5d2343cafee"
+    },
+    {
+      "$oid": "693120939631a5d2343cafef"
+    },
+    {
+      "$oid": "693120939631a5d2343caff0"
+    },
+    {
+      "$oid": "693120939631a5d2343caff1"
+    },
+    {
+      "$oid": "693120939631a5d2343caff2"
+    },
+    {
+      "$oid": "693120939631a5d2343caff3"
+    },
+    {
+      "$oid": "693120939631a5d2343caff4"
+    },
+    {
+      "$oid": "693120939631a5d2343caff5"
+    },
+    {
+      "$oid": "693120939631a5d2343caff6"
+    },
+    {
+      "$oid": "693120939631a5d2343caff7"
+    },
+    {
+      "$oid": "693120939631a5d2343caff8"
+    },
+    {
+      "$oid": "693120939631a5d2343caff9"
+    },
+    {
+      "$oid": "693120939631a5d2343caffa"
+    },
+    {
+      "$oid": "693120939631a5d2343caffb"
+    },
+    {
+      "$oid": "693120939631a5d2343caffc"
+    },
+    {
+      "$oid": "693120939631a5d2343caffd"
+    },
+    {
+      "$oid": "693120939631a5d2343caffe"
+    }
+  ],
+  "creator": {
+    "$oid": "69302c8bcaf86e80f0cda313"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:30:33.910Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:31:56.936Z"
+  },
+  "__v": 0,
+  "coursePrice": 599,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765116/wwxauukfdctljkex4ukh.webp",
+  "description": "<p>Learn backend development from scratch.... ..</p>",
+  "subTitle": "Learn backend development from scratch "
+},
+{
+  "_id": {
+    "$oid": "69302dd1caf86e80f0cda369"
+  },
+  "courseTitle": "Python",
+  "courseCategory": "Data Analytics",
+  "courseLevel": "Beginner",
+  "enrolledStudents": [],
+  "lectures": [
+    {
+      "$oid": "6931226b9631a5d2343cb002"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb003"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb004"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb005"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb006"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb007"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb008"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb009"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00a"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00b"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00c"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00d"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00e"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb00f"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb010"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb011"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb012"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb013"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb014"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb015"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb016"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb017"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb018"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb019"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb01a"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb01b"
+    },
+    {
+      "$oid": "6931226b9631a5d2343cb01c"
+    }
+  ],
+  "creator": {
+    "$oid": "69302c8bcaf86e80f0cda313"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:32:17.247Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:33:27.311Z"
+  },
+  "__v": 0,
+  "coursePrice": 199,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765206/gxkhdudgk9exd5vhbrmq.webp",
+  "description": "<p>Become Python developer</p>",
+  "subTitle": "Become Python developer from scratch "
+},
+{
+  "_id": {
+    "$oid": "69302e43caf86e80f0cda37c"
+  },
+  "courseTitle": "Git and GitHub",
+  "courseCategory": "MERN FullStack Development",
+  "courseLevel": "Beginner",
+  "enrolledStudents": [],
+  "lectures": [
+    {
+      "$oid": "693129509631a5d2343cb069"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06a"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06b"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06c"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06d"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06e"
+    },
+    {
+      "$oid": "693129509631a5d2343cb06f"
+    },
+    {
+      "$oid": "693129509631a5d2343cb070"
+    },
+    {
+      "$oid": "693129509631a5d2343cb071"
+    },
+    {
+      "$oid": "693129509631a5d2343cb072"
+    },
+    {
+      "$oid": "693129509631a5d2343cb073"
+    },
+    {
+      "$oid": "693129509631a5d2343cb074"
+    },
+    {
+      "$oid": "693129509631a5d2343cb075"
+    },
+    {
+      "$oid": "693129509631a5d2343cb076"
+    },
+    {
+      "$oid": "693129509631a5d2343cb077"
+    },
+    {
+      "$oid": "693129509631a5d2343cb078"
+    },
+    {
+      "$oid": "693129509631a5d2343cb079"
+    },
+    {
+      "$oid": "693129509631a5d2343cb07a"
+    },
+    {
+      "$oid": "693129509631a5d2343cb07b"
+    }
+  ],
+  "creator": {
+    "$oid": "69302c8bcaf86e80f0cda313"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:34:11.813Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:34:52.332Z"
+  },
+  "__v": 0,
+  "coursePrice": 0,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765291/b9tlv1klllamh5acxhal.webp",
+  "description": "",
+  "subTitle": "GitHub "
+},
+{
+  "_id": {
+    "$oid": "69302f3fcaf86e80f0cda3b5"
+  },
+  "courseTitle": "Data structure and algorithms",
+  "courseCategory": "Data Structures & Algorithms",
+  "courseLevel": "Advance",
+  "enrolledStudents": [],
+  "lectures": [
+    {
+      "$oid": "6931231c9631a5d2343cb020"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb021"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb022"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb023"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb024"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb025"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb026"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb027"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb028"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb029"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02a"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02b"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02c"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02d"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02e"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb02f"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb030"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb031"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb032"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb033"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb034"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb035"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb036"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb037"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb038"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb039"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03a"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03b"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03c"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03d"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03e"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb03f"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb040"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb041"
+    },
+    {
+      "$oid": "6931231c9631a5d2343cb042"
+    }
+  ],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:38:23.166Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:39:39.541Z"
+  },
+  "__v": 0,
+  "coursePrice": 999,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765579/fjo2nwbswlhjlfxxqoek.webp",
+  "description": "<p>DSA</p>",
+  "subTitle": "Become SDE developer  "
+},
+{
+  "_id": {
+    "$oid": "69302fa4caf86e80f0cda3cc"
+  },
+  "courseTitle": "Cyber security",
+  "courseCategory": "Cyber Security",
+  "courseLevel": "Beginner",
+  "enrolledStudents": [
+    {
+      "$oid": "692f1ae348124d24fd021d97"
+    }
+  ],
+  "lectures": [
+    "69312a8c9631a5d2343cb07f"
+  ],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:40:04.432Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T06:32:05.576Z"
+  },
+  "__v": 0,
+  "coursePrice": null,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765636/bdtyilbefgddfnfuyaui.webp",
+  "description": "",
+  "subTitle": "Learn cyber security "
+},
+{
+  "_id": {
+    "$oid": "69302feacaf86e80f0cda3df"
+  },
+  "courseTitle": "Database management system",
+  "courseCategory": "Data Analytics",
+  "courseLevel": "Beginner",
+  "enrolledStudents": [],
+  "lectures": [
+    "69312b449631a5d2343cb083"
+  ],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:41:14.331Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:42:09.247Z"
+  },
+  "__v": 0,
+  "coursePrice": 299,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765728/vg6e68tnirlztwl8vcre.webp",
+  "description": "",
+  "subTitle": "Dbms"
+},
+{
+  "_id": {
+    "$oid": "69303051caf86e80f0cda3f6"
+  },
+  "courseTitle": "Computer network",
+  "courseCategory": "Cyber Security",
+  "courseLevel": "Advance",
+  "enrolledStudents": [],
+  "lectures": [
+    {
+      "$oid": "6931269a9631a5d2343cb046"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb047"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb048"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb049"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04a"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04b"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04c"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04d"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04e"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb04f"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb050"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb051"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb052"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb053"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb054"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb055"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb056"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb057"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb058"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb059"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05a"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05b"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05c"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05d"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05e"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb05f"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb060"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb061"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb062"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb063"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb064"
+    },
+    {
+      "$oid": "6931269a9631a5d2343cb065"
+    }
+  ],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:42:57.861Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:43:41.731Z"
+  },
+  "__v": 0,
+  "coursePrice": 1999,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765821/szrlodku2mhkz2nadfhi.webp",
+  "description": "",
+  "subTitle": "Cn"
+},
+{
+  "_id": {
+    "$oid": "6930309fcaf86e80f0cda40b"
+  },
+  "courseTitle": "Data analysis",
+  "courseCategory": "Data Analytics",
+  "courseLevel": "Medium",
+  "enrolledStudents": [],
+  "lectures": [],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:44:15.011Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:45:17.438Z"
+  },
+  "__v": 0,
+  "coursePrice": 259,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764765899/t5cahmawcpthc8svefan.webp",
+  "description": "",
+  "subTitle": "Become Python developer from scratch "
+},
+{
+  "_id": {
+    "$oid": "69303115caf86e80f0cda427"
+  },
+  "courseTitle": "Java",
+  "courseCategory": "Java Developer",
+  "courseLevel": "Beginner",
+  "enrolledStudents": [
+    {
+      "$oid": "692fda8cda8019a111b6cede"
+    }
+  ],
+  "lectures": [
+    {
+      "$oid": "693031afcaf86e80f0cda452"
+    },
+    {
+      "$oid": "693031e3caf86e80f0cda463"
+    }
+  ],
+  "creator": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2025-12-03T12:46:13.971Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:51:52.764Z"
+  },
+  "__v": 2,
+  "coursePrice": 200,
+  "courseThumbnail": "https://res.cloudinary.com/amankrc/image/upload/v1764766012/gvjuzldhgait18cowmby.webp",
+  "description": "",
+  "subTitle": ""
+}]

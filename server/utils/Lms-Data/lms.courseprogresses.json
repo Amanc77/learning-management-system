@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "69303271caf86e80f0cda4a1"
+  },
+  "userId": "692fda8cda8019a111b6cede",
+  "courseId": "69303115caf86e80f0cda427",
+  "completed": true,
+  "lectureProgress": [
+    {
+      "lectureId": "693031afcaf86e80f0cda452",
+      "viewed": true,
+      "_id": {
+        "$oid": "69303271caf86e80f0cda4a2"
+      }
+    },
+    {
+      "lectureId": "693031e3caf86e80f0cda463",
+      "viewed": true,
+      "_id": {
+        "$oid": "6930327ccaf86e80f0cda4b1"
+      }
+    }
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "69311f86c02e8b48aaf07670"
+  },
+  "userId": "692f1ae348124d24fd021d97",
+  "courseId": "69302cd5caf86e80f0cda325",
+  "completed": false,
+  "lectureProgress": [
+    {
+      "lectureId": "69311ad39631a5d2343cafae",
+      "viewed": true,
+      "_id": {
+        "$oid": "69311f86c02e8b48aaf07671"
+      }
+    }
+  ],
+  "__v": 0
+}]

@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "69303235caf86e80f0cda490"
+  },
+  "courseId": {
+    "$oid": "69303115caf86e80f0cda427"
+  },
+  "userId": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "amount": 200,
+  "status": "completed",
+  "paymentId": "order_Rn92uJlHcPaJq5",
+  "createdAt": {
+    "$date": "2025-12-03T12:51:01.774Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:51:52.293Z"
+  },
+  "__v": 0,
+  "razorpayPaymentId": "pay_Rn93Uk4wwSXQ7R"
+},
+{
+  "_id": {
+    "$oid": "69311ce8c02e8b48aaf075f3"
+  },
+  "courseId": {
+    "$oid": "69302cd5caf86e80f0cda325"
+  },
+  "userId": {
+    "$oid": "692f1ae348124d24fd021d97"
+  },
+  "amount": 399,
+  "status": "completed",
+  "paymentId": "order_RnQ6h81E38mjBh",
+  "createdAt": {
+    "$date": "2025-12-04T05:32:24.361Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T05:32:55.127Z"
+  },
+  "__v": 0,
+  "razorpayPaymentId": "pay_RnQ6uLK4WXbOQJ"
+},
+{
+  "_id": {
+    "$oid": "69312ae5c02e8b48aaf077bc"
+  },
+  "courseId": {
+    "$oid": "69302fa4caf86e80f0cda3cc"
+  },
+  "userId": {
+    "$oid": "692f1ae348124d24fd021d97"
+  },
+  "amount": 0,
+  "status": "completed",
+  "paymentId": "FREE_COURSE",
+  "createdAt": {
+    "$date": "2025-12-04T06:32:05.094Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T06:32:05.094Z"
+  },
+  "__v": 0
+}]

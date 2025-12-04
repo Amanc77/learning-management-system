@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "692dddb425169e8734d8f148"
+  },
+  "name": "kuamr",
+  "email": "instrct@gmail.com",
+  "password": "$2b$10$n/tabLfTncm1M277UxbvHeS7lyGCbeFYAwpNPbO/Svuzx3nB4eVL6",
+  "role": "instructor",
+  "photoUrl": "",
+  "enrolledCourses": [],
+  "createdAt": {
+    "$date": "2025-12-01T18:25:56.445Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T18:25:56.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692f1ae348124d24fd021d97"
+  },
+  "name": "naman",
+  "email": "aman@gmail.com",
+  "password": "$2b$10$mja/Z6mM238hT8v6tLNRVeBUjbVQ/ChzDUfMRwohF/AIvH6VzfXt6",
+  "role": "student",
+  "photoUrl": "",
+  "enrolledCourses": [
+    {
+      "$oid": "69302cd5caf86e80f0cda325"
+    },
+    {
+      "$oid": "69302fa4caf86e80f0cda3cc"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-02T16:59:15.397Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T06:32:05.335Z"
+  },
+  "__v": 0,
+  "description": "hi hjbkn"
+},
+{
+  "_id": {
+    "$oid": "692fda8cda8019a111b6cede"
+  },
+  "name": "Instructor",
+  "email": "instructor@gmail.com",
+  "password": "$2b$10$5SZ3dkofwwm93o4rW1/U6O5pDGmTMDL0RZrJO7U6i.hDYuZMFHWZO",
+  "role": "instructor",
+  "photoUrl": "",
+  "enrolledCourses": [
+    {
+      "$oid": "69303115caf86e80f0cda427"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T06:37:00.190Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:51:52.528Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69301617bebc6742d77a6404"
+  },
+  "name": "hbjnk",
+  "email": "aman7@gmail.com",
+  "password": "$2b$10$KvEdMAKWAcnhpFolRWntVenf5m05bjYFFxZYIh7K35kwjxnBsSHWi",
+  "role": "student",
+  "photoUrl": "",
+  "enrolledCourses": [],
+  "createdAt": {
+    "$date": "2025-12-03T10:51:03.360Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T10:51:03.360Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6930167bbebc6742d77a641d"
+  },
+  "name": "k",
+  "email": "jecitoj392@apklamp.com",
+  "password": "$2b$10$Pyonfasqp7KrgKxthOSkLeKfQ8zooZ/Nhw3MTDIOSPiVLrBT.NQxG",
+  "role": "student",
+  "photoUrl": "",
+  "enrolledCourses": [],
+  "createdAt": {
+    "$date": "2025-12-03T10:52:43.467Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T10:52:43.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69302c8bcaf86e80f0cda313"
+  },
+  "name": "Hitesh chaudhary",
+  "email": "hitesh@gmail.com",
+  "password": "$2b$10$ZuwbP6tPIDJd.dQCZ18W7uhsqnjp.oYZ7VVXApdOmQS1UvmglWd5.",
+  "role": "instructor",
+  "photoUrl": "https://res.cloudinary.com/amankrc/image/upload/v1764765407/tnh5heoe8fc4u0grftms.jpg",
+  "enrolledCourses": [],
+  "createdAt": {
+    "$date": "2025-12-03T12:26:51.485Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:36:48.305Z"
+  },
+  "__v": 0,
+  "description": "Chai aur code"
+}]

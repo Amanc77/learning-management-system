@@ -1,0 +1,2951 @@
+[{
+  "_id": {
+    "$oid": "692dde0725169e8734d8f18d"
+  },
+  "lectureTitle": "new ",
+  "createdAt": {
+    "$date": "2025-12-01T18:27:19.895Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T18:27:19.895Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692dde0825169e8734d8f190"
+  },
+  "lectureTitle": "new ",
+  "createdAt": {
+    "$date": "2025-12-01T18:27:20.294Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T18:27:20.294Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692dde0825169e8734d8f193"
+  },
+  "lectureTitle": "new ",
+  "createdAt": {
+    "$date": "2025-12-01T18:27:20.430Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T18:27:20.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "693031afcaf86e80f0cda452"
+  },
+  "lectureTitle": "Introduction of java",
+  "createdAt": {
+    "$date": "2025-12-03T12:48:47.117Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:49:13.159Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "videos/hftivsmom9qoxkbdscfw",
+  "videoUrl": "https://res.cloudinary.com/amankrc/video/upload/v1764766149/videos/hftivsmom9qoxkbdscfw.mp4"
+},
+{
+  "_id": {
+    "$oid": "693031e3caf86e80f0cda463"
+  },
+  "lectureTitle": "Hello world ",
+  "createdAt": {
+    "$date": "2025-12-03T12:49:39.175Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T12:50:30.027Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "videos/pqpcqyjimlat7mswb48x",
+  "videoUrl": "https://res.cloudinary.com/amankrc/video/upload/v1764766214/videos/pqpcqyjimlat7mswb48x.mp4"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafad"
+  },
+  "lectureTitle": "HTML and VSCode - getting started | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "html-vscode-getting-started",
+  "videoUrl": "https://www.youtube.com/watch?v=XmLOwJHFHf0"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafae"
+  },
+  "lectureTitle": "Core structure of HTML and Meta tags | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-core-structure-meta",
+  "videoUrl": "https://www.youtube.com/watch?v=v-xdY6VFcio"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafaf"
+  },
+  "lectureTitle": "Heading, paragraph and reading docs | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-heading-paragraph",
+  "videoUrl": "https://www.youtube.com/watch?v=CetKwpx3t6g"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb0"
+  },
+  "lectureTitle": "Formatting style and Global attributes | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-formatting-attributes",
+  "videoUrl": "https://www.youtube.com/watch?v=QEoU5Kaz9lQ"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb1"
+  },
+  "lectureTitle": "Value of colors and CSS format",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-colors-css",
+  "videoUrl": "https://www.youtube.com/watch?v=AdmLG2xhdvM"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb2"
+  },
+  "lectureTitle": "Links and Images with Map",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-links-images",
+  "videoUrl": "https://www.youtube.com/watch?v=T_ca5aO3WN0"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb3"
+  },
+  "lectureTitle": "Tables in HTML in HINDI",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-tables",
+  "videoUrl": "https://www.youtube.com/watch?v=d2Tb9hd9pHM"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb4"
+  },
+  "lectureTitle": "List, inline and Block element",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-lists-block-inline",
+  "videoUrl": "https://www.youtube.com/watch?v=MiJrcI4LXMA"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb5"
+  },
+  "lectureTitle": "Class ID and iframe | HTML in Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-class-id-iframe",
+  "videoUrl": "https://www.youtube.com/watch?v=I7LrS1z_WNA"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb6"
+  },
+  "lectureTitle": "Head Tag in HTML | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-head-tag",
+  "videoUrl": "https://www.youtube.com/watch?v=-wMbf3qVNsc"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb7"
+  },
+  "lectureTitle": "HTML semantics",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-semantics",
+  "videoUrl": "https://www.youtube.com/watch?v=DSRMCZwM3YE"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb8"
+  },
+  "lectureTitle": "HTML forms and forms attributes | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-forms-attributes",
+  "videoUrl": "https://www.youtube.com/watch?v=LhWQlBdqaeM"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafb9"
+  },
+  "lectureTitle": "Types of input forms | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-input-types",
+  "videoUrl": "https://www.youtube.com/watch?v=YR2fepUAp5c"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafba"
+  },
+  "lectureTitle": "HTML MEDIA and API | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "html-media-api",
+  "videoUrl": "https://www.youtube.com/watch?v=E_AExAmpq_o"
+},
+{
+  "_id": {
+    "$oid": "69311ad39631a5d2343cafbb"
+  },
+  "lectureTitle": "HTML series over, what next",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "html-series-complete",
+  "videoUrl": "https://www.youtube.com/watch?v=pYSXmQCrxlw"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafcc"
+  },
+  "lectureTitle": "Javascript Backend Roadmap | chai aur backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "js-backend-01-roadmap",
+  "videoUrl": "https://www.youtube.com/watch?v=EH3vGeqeIAo"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafcd"
+  },
+  "lectureTitle": "How to deploy backend code in production",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-02-deploy",
+  "videoUrl": "https://www.youtube.com/watch?v=pOV4EjUtl70"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafce"
+  },
+  "lectureTitle": "How to connect frontend and backend in javascript | Fullstack Proxy and CORS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-03-connect-frontend",
+  "videoUrl": "https://www.youtube.com/watch?v=fFHyqhmnVfs"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafcf"
+  },
+  "lectureTitle": "Taking backend to next level",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-04-next-level",
+  "videoUrl": "https://www.youtube.com/watch?v=10hRlpUNeNA"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd0"
+  },
+  "lectureTitle": "Data modelling for backend with mongoose",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-05-data-modelling",
+  "videoUrl": "https://www.youtube.com/watch?v=VbGl3msgce8"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd1"
+  },
+  "lectureTitle": "Ecommerce and Hospital management Data modelling",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-06-ecommerce-hospital",
+  "videoUrl": "https://www.youtube.com/watch?v=lA_mNpddN5U"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd2"
+  },
+  "lectureTitle": "How to setup a professional backend project",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-07-setup-project",
+  "videoUrl": "https://www.youtube.com/watch?v=9B4CvtzXRpc"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd3"
+  },
+  "lectureTitle": "How to connect database in MERN with debugging",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-08-connect-db",
+  "videoUrl": "https://www.youtube.com/watch?v=w4z8Py-UoNk"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd4"
+  },
+  "lectureTitle": "Custom api response and error handling | chai aur backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-09-api-response",
+  "videoUrl": "https://www.youtube.com/watch?v=S5EpsMjel-M"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd5"
+  },
+  "lectureTitle": "User and video model with hooks and JWT",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-10-user-video-model",
+  "videoUrl": "https://www.youtube.com/watch?v=eWnZVUXMq8k"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd6"
+  },
+  "lectureTitle": "How to upload file in backend | Multer",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-11-upload-file",
+  "videoUrl": "https://www.youtube.com/watch?v=6KPXn2Ha0cM"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd7"
+  },
+  "lectureTitle": "HTTP crash course | http Methods | http headers",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-12-http-crash",
+  "videoUrl": "https://www.youtube.com/watch?v=qgZiUvV41TI"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd8"
+  },
+  "lectureTitle": "Complete guide for router and controller with debugging",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-13-router-controller",
+  "videoUrl": "https://www.youtube.com/watch?v=HqcGLJSORaA"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafd9"
+  },
+  "lectureTitle": "Logic building | Register controller",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-14-logic-register",
+  "videoUrl": "https://www.youtube.com/watch?v=VKXnSwNm_lE"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafda"
+  },
+  "lectureTitle": "How to use postman for backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-15-postman",
+  "videoUrl": "https://www.youtube.com/watch?v=_u-WgSN5ymU"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafdb"
+  },
+  "lectureTitle": "Access Refresh Token, Middleware and cookies in Backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-16-tokens-middleware",
+  "videoUrl": "https://www.youtube.com/watch?v=7DVpag3cO0g"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafdc"
+  },
+  "lectureTitle": "Access token and refresh token in Backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-17-access-refresh",
+  "videoUrl": "https://www.youtube.com/watch?v=L2_gIrDxCes"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafdd"
+  },
+  "lectureTitle": "Writing update controllers for user | Backend with JS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-18-update-controllers",
+  "videoUrl": "https://www.youtube.com/watch?v=9azRerL6CZc"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafde"
+  },
+  "lectureTitle": "Understand the subscription Schema",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-19-subscription-schema",
+  "videoUrl": "https://www.youtube.com/watch?v=4_Ge2QEcT8k"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafdf"
+  },
+  "lectureTitle": "Learn Mongodb aggregation pipelines",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-20-aggregation",
+  "videoUrl": "https://www.youtube.com/watch?v=fDTf1mk-jQg"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafe0"
+  },
+  "lectureTitle": "How to write sub pipelines and routes",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-21-sub-pipelines",
+  "videoUrl": "https://www.youtube.com/watch?v=qNnR7cuVliI"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafe1"
+  },
+  "lectureTitle": "Summary of our Backend Series",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-22-summary",
+  "videoUrl": "https://www.youtube.com/watch?v=VUgl3i8DdW4"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafe2"
+  },
+  "lectureTitle": "MongoDB models for like playlist and tweet",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-23-models-like-playlist",
+  "videoUrl": "https://www.youtube.com/watch?v=-5yWyE4AiVk"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafe3"
+  },
+  "lectureTitle": "Build in public and open source | Only video that you need",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-24-build-public",
+  "videoUrl": "https://www.youtube.com/watch?v=3ouqT3lfiUE"
+},
+{
+  "_id": {
+    "$oid": "6931203b9631a5d2343cafe4"
+  },
+  "lectureTitle": "Backend series Final Video",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "js-backend-25-final",
+  "videoUrl": "https://www.youtube.com/watch?v=Uc3Iq41npyI"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafe6"
+  },
+  "lectureTitle": "Javascript Backend Roadmap | chai aur backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "js-backend-01-roadmap",
+  "videoUrl": "https://www.youtube.com/watch?v=EH3vGeqeIAo"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafe7"
+  },
+  "lectureTitle": "How to deploy backend code in production",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-02-deploy",
+  "videoUrl": "https://www.youtube.com/watch?v=pOV4EjUtl70"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafe8"
+  },
+  "lectureTitle": "How to connect frontend and backend in javascript | Fullstack Proxy and CORS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-03-connect-frontend",
+  "videoUrl": "https://www.youtube.com/watch?v=fFHyqhmnVfs"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafe9"
+  },
+  "lectureTitle": "Taking backend to next level",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-04-next-level",
+  "videoUrl": "https://www.youtube.com/watch?v=10hRlpUNeNA"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafea"
+  },
+  "lectureTitle": "Data modelling for backend with mongoose",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-05-data-modelling",
+  "videoUrl": "https://www.youtube.com/watch?v=VbGl3msgce8"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafeb"
+  },
+  "lectureTitle": "Ecommerce and Hospital management Data modelling",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-06-ecommerce-hospital",
+  "videoUrl": "https://www.youtube.com/watch?v=lA_mNpddN5U"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafec"
+  },
+  "lectureTitle": "How to setup a professional backend project",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-07-setup-project",
+  "videoUrl": "https://www.youtube.com/watch?v=9B4CvtzXRpc"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafed"
+  },
+  "lectureTitle": "How to connect database in MERN with debugging",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-08-connect-db",
+  "videoUrl": "https://www.youtube.com/watch?v=w4z8Py-UoNk"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafee"
+  },
+  "lectureTitle": "Custom api response and error handling | chai aur backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-09-api-response",
+  "videoUrl": "https://www.youtube.com/watch?v=S5EpsMjel-M"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343cafef"
+  },
+  "lectureTitle": "User and video model with hooks and JWT",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-10-user-video-model",
+  "videoUrl": "https://www.youtube.com/watch?v=eWnZVUXMq8k"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff0"
+  },
+  "lectureTitle": "How to upload file in backend | Multer",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-11-upload-file",
+  "videoUrl": "https://www.youtube.com/watch?v=6KPXn2Ha0cM"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff1"
+  },
+  "lectureTitle": "HTTP crash course | http Methods | http headers",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-12-http-crash",
+  "videoUrl": "https://www.youtube.com/watch?v=qgZiUvV41TI"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff2"
+  },
+  "lectureTitle": "Complete guide for router and controller with debugging",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-13-router-controller",
+  "videoUrl": "https://www.youtube.com/watch?v=HqcGLJSORaA"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff3"
+  },
+  "lectureTitle": "Logic building | Register controller",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-14-logic-register",
+  "videoUrl": "https://www.youtube.com/watch?v=VKXnSwNm_lE"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff4"
+  },
+  "lectureTitle": "How to use postman for backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-15-postman",
+  "videoUrl": "https://www.youtube.com/watch?v=_u-WgSN5ymU"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff5"
+  },
+  "lectureTitle": "Access Refresh Token, Middleware and cookies in Backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-16-tokens-middleware",
+  "videoUrl": "https://www.youtube.com/watch?v=7DVpag3cO0g"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff6"
+  },
+  "lectureTitle": "Access token and refresh token in Backend",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-17-access-refresh",
+  "videoUrl": "https://www.youtube.com/watch?v=L2_gIrDxCes"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff7"
+  },
+  "lectureTitle": "Writing update controllers for user | Backend with JS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-18-update-controllers",
+  "videoUrl": "https://www.youtube.com/watch?v=9azRerL6CZc"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff8"
+  },
+  "lectureTitle": "Understand the subscription Schema",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-19-subscription-schema",
+  "videoUrl": "https://www.youtube.com/watch?v=4_Ge2QEcT8k"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caff9"
+  },
+  "lectureTitle": "Learn Mongodb aggregation pipelines",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-20-aggregation",
+  "videoUrl": "https://www.youtube.com/watch?v=fDTf1mk-jQg"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caffa"
+  },
+  "lectureTitle": "How to write sub pipelines and routes",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-21-sub-pipelines",
+  "videoUrl": "https://www.youtube.com/watch?v=qNnR7cuVliI"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caffb"
+  },
+  "lectureTitle": "Summary of our Backend Series",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-22-summary",
+  "videoUrl": "https://www.youtube.com/watch?v=VUgl3i8DdW4"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caffc"
+  },
+  "lectureTitle": "MongoDB models for like playlist and tweet",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-23-models-like-playlist",
+  "videoUrl": "https://www.youtube.com/watch?v=-5yWyE4AiVk"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caffd"
+  },
+  "lectureTitle": "Build in public and open source | Only video that you need",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "js-backend-24-build-public",
+  "videoUrl": "https://www.youtube.com/watch?v=3ouqT3lfiUE"
+},
+{
+  "_id": {
+    "$oid": "693120939631a5d2343caffe"
+  },
+  "lectureTitle": "Backend series Final Video",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "js-backend-25-final",
+  "videoUrl": "https://www.youtube.com/watch?v=Uc3Iq41npyI"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb002"
+  },
+  "lectureTitle": "Python Tutorial for Beginners in Hindi - Introduction | Chai aur Python",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "python-01-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=Ca5DLSDfPec"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb003"
+  },
+  "lectureTitle": "Python Setup and First Program in Hindi | Chai aur Python",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-02-setup-first-program",
+  "videoUrl": "https://www.youtube.com/watch?v=3kQ8Qb7O3jI"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb004"
+  },
+  "lectureTitle": "Variables and Data Types in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-03-variables-datatypes",
+  "videoUrl": "https://www.youtube.com/watch?v=5kB7Qj1o2kA"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb005"
+  },
+  "lectureTitle": "Operators in Python | Arithmetic, Comparison, Logical | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-04-operators",
+  "videoUrl": "https://www.youtube.com/watch?v=8zX1q4y7qM4"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb006"
+  },
+  "lectureTitle": "Python Strings and String Methods | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-05-strings",
+  "videoUrl": "https://www.youtube.com/watch?v=2pK4j3n6pE8"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb007"
+  },
+  "lectureTitle": "Python Lists and List Methods | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-06-lists",
+  "videoUrl": "https://www.youtube.com/watch?v=9m5y3z8r5tY"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb008"
+  },
+  "lectureTitle": "Python Tuples and Sets | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-07-tuples-sets",
+  "videoUrl": "https://www.youtube.com/watch?v=4k2j9p7q3mW"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb009"
+  },
+  "lectureTitle": "Python Dictionaries | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-08-dictionaries",
+  "videoUrl": "https://www.youtube.com/watch?v=6h8n1v2x4bR"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00a"
+  },
+  "lectureTitle": "If Else and Loops in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-09-if-loops",
+  "videoUrl": "https://www.youtube.com/watch?v=7f9o3s5t6yU"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00b"
+  },
+  "lectureTitle": "While and For Loops in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-10-while-for",
+  "videoUrl": "https://www.youtube.com/watch?v=1a2b3c4d5eF"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00c"
+  },
+  "lectureTitle": "Functions in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "python-11-functions",
+  "videoUrl": "https://www.youtube.com/watch?v=8g9h0i1j2kL"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00d"
+  },
+  "lectureTitle": "Lambda Functions and Recursion in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-12-lambda-recursion",
+  "videoUrl": "https://www.youtube.com/watch?v=3m4n5o6p7qS"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00e"
+  },
+  "lectureTitle": "File Handling in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-13-file-handling",
+  "videoUrl": "https://www.youtube.com/watch?v=9r0s1t2u3vX"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb00f"
+  },
+  "lectureTitle": "Exception Handling in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-14-exceptions",
+  "videoUrl": "https://www.youtube.com/watch?v=4w5x6y7z8aC"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb010"
+  },
+  "lectureTitle": "OOPs in Python | Class and Objects | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-15-oops-class-objects",
+  "videoUrl": "https://www.youtube.com/watch?v=5b6c7d8e9fG"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb011"
+  },
+  "lectureTitle": "Inheritance in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-16-inheritance",
+  "videoUrl": "https://www.youtube.com/watch?v=0h1i2j3k4lM"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb012"
+  },
+  "lectureTitle": "Polymorphism in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-17-polymorphism",
+  "videoUrl": "https://www.youtube.com/watch?v=6n7o8p9q0rT"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb013"
+  },
+  "lectureTitle": "Encapsulation and Abstraction in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-18-encap-abstraction",
+  "videoUrl": "https://www.youtube.com/watch?v=1s2t3u4v5wY"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb014"
+  },
+  "lectureTitle": "Python Modules and Packages | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-19-modules-packages",
+  "videoUrl": "https://www.youtube.com/watch?v=7z8x9y0a1bD"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb015"
+  },
+  "lectureTitle": "Python Date and Time | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-20-date-time",
+  "videoUrl": "https://www.youtube.com/watch?v=2c3d4e5f6gH"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb016"
+  },
+  "lectureTitle": "Regular Expressions in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-21-regex",
+  "videoUrl": "https://www.youtube.com/watch?v=8i9j0k1l2mN"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb017"
+  },
+  "lectureTitle": "Python Collections Module | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-22-collections",
+  "videoUrl": "https://www.youtube.com/watch?v=3n4o5p6q7rO"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb018"
+  },
+  "lectureTitle": "Python Itertools Module | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-23-itertools",
+  "videoUrl": "https://www.youtube.com/watch?v=9s0t1u2v3wP"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb019"
+  },
+  "lectureTitle": "Python OS Module | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-24-os-module",
+  "videoUrl": "https://www.youtube.com/watch?v=4x5y6z7a8bQ"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb01a"
+  },
+  "lectureTitle": "Python JSON Module | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "python-25-json",
+  "videoUrl": "https://www.youtube.com/watch?v=0c1d2e3f4gR"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb01b"
+  },
+  "lectureTitle": "Python Project - To Do List | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "python-26-project-todo",
+  "videoUrl": "https://www.youtube.com/watch?v=5h6i7j8k9lS"
+},
+{
+  "_id": {
+    "$oid": "6931226b9631a5d2343cb01c"
+  },
+  "lectureTitle": "Python Series Complete - What Next | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "python-27-complete-next",
+  "videoUrl": "https://www.youtube.com/watch?v=1m2n3o4p5qT"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb020"
+  },
+  "lectureTitle": "Arrays Playlist | Basics to Advanced | C++/Java/Python | DSA | Placements - Introduction",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "arrays-01-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=37E9ckMDdTk"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb021"
+  },
+  "lectureTitle": "What is Array? | Introduction to Arrays | DSA Playlist",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-02-what-is-array",
+  "videoUrl": "https://www.youtube.com/watch?v=4y7q7I5q8sM"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb022"
+  },
+  "lectureTitle": "Array Declaration and Memory Allocation in C++ | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-03-declaration-cpp",
+  "videoUrl": "https://www.youtube.com/watch?v=9kR8gM2l2zU"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb023"
+  },
+  "lectureTitle": "Array Declaration and Memory Allocation in Java | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-04-declaration-java",
+  "videoUrl": "https://www.youtube.com/watch?v=5Q9qFHp5Z3Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb024"
+  },
+  "lectureTitle": "Array Declaration and Memory Allocation in Python | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-05-declaration-python",
+  "videoUrl": "https://www.youtube.com/watch?v=2s0Y2rW9Y9Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb025"
+  },
+  "lectureTitle": "Accessing Array Elements | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-06-accessing-elements",
+  "videoUrl": "https://www.youtube.com/watch?v=8cGO3hKk2wE"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb026"
+  },
+  "lectureTitle": "Array Input and Output | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-07-io",
+  "videoUrl": "https://www.youtube.com/watch?v=5eMhC8Y1YbA"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb027"
+  },
+  "lectureTitle": "Linear Search in Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-08-linear-search",
+  "videoUrl": "https://www.youtube.com/watch?v=0bG0y2B7wY8"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb028"
+  },
+  "lectureTitle": "Largest Element in Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-09-largest-element",
+  "videoUrl": "https://www.youtube.com/watch?v=5g2h2z8i8qM"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb029"
+  },
+  "lectureTitle": "Second Largest Element in Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "arrays-10-second-largest",
+  "videoUrl": "https://www.youtube.com/watch?v=9kR8gM2l2zU"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02a"
+  },
+  "lectureTitle": "Reverse an Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-11-reverse",
+  "videoUrl": "https://www.youtube.com/watch?v=5Q9qFHp5Z3Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02b"
+  },
+  "lectureTitle": "Check if Array is Sorted | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-12-sorted-check",
+  "videoUrl": "https://www.youtube.com/watch?v=2s0Y2rW9Y9Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02c"
+  },
+  "lectureTitle": "Left Rotate Array by One Place | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-13-left-rotate",
+  "videoUrl": "https://www.youtube.com/watch?v=8cGO3hKk2wE"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02d"
+  },
+  "lectureTitle": "Left Rotate Array by D Places | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-14-left-rotate-d",
+  "videoUrl": "https://www.youtube.com/watch?v=5eMhC8Y1YbA"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02e"
+  },
+  "lectureTitle": "Move Zeroes to End | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-15-move-zeroes",
+  "videoUrl": "https://www.youtube.com/watch?v=0bG0y2B7wY8"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb02f"
+  },
+  "lectureTitle": "Linear Search in 2D Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-16-linear-search-2d",
+  "videoUrl": "https://www.youtube.com/watch?v=5g2h2z8i8qM"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb030"
+  },
+  "lectureTitle": "Print 2D Array in Spiral Form | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-17-spiral-2d",
+  "videoUrl": "https://www.youtube.com/watch?v=9kR8gM2l2zU"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb031"
+  },
+  "lectureTitle": "Row Wise Sum in 2D Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-18-row-sum-2d",
+  "videoUrl": "https://www.youtube.com/watch?v=5Q9qFHp5Z3Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb032"
+  },
+  "lectureTitle": "Kadane's Algorithm | Maximum Subarray Sum | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-19-kadane",
+  "videoUrl": "https://www.youtube.com/watch?v=2s0Y2rW9Y9Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb033"
+  },
+  "lectureTitle": "Maximum Subarray Sum Using Prefix Sum | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-20-prefix-sum-max",
+  "videoUrl": "https://www.youtube.com/watch?v=8cGO3hKk2wE"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb034"
+  },
+  "lectureTitle": "Equilibrium Point in Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-21-equilibrium",
+  "videoUrl": "https://www.youtube.com/watch?v=5eMhC8Y1YbA"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb035"
+  },
+  "lectureTitle": "Leaders in Array | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-22-leaders",
+  "videoUrl": "https://www.youtube.com/watch?v=0bG0y2B7wY8"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb036"
+  },
+  "lectureTitle": "Longest Consecutive Sequence | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-23-longest-consec",
+  "videoUrl": "https://www.youtube.com/watch?v=5g2h2z8i8qM"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb037"
+  },
+  "lectureTitle": "Set Matrix Zeroes | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-24-matrix-zeroes",
+  "videoUrl": "https://www.youtube.com/watch?v=9kR8gM2l2zU"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb038"
+  },
+  "lectureTitle": "Pascal's Triangle | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-25-pascal-triangle",
+  "videoUrl": "https://www.youtube.com/watch?v=5Q9qFHp5Z3Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb039"
+  },
+  "lectureTitle": "Next Permutation | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-26-next-permutation",
+  "videoUrl": "https://www.youtube.com/watch?v=2s0Y2rW9Y9Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03a"
+  },
+  "lectureTitle": "Sort an Array of 0s, 1s and 2s | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-27-sort-012",
+  "videoUrl": "https://www.youtube.com/watch?v=8cGO3hKk2wE"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03b"
+  },
+  "lectureTitle": "Stock Buy and Sell | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-28-stock-buy-sell",
+  "videoUrl": "https://www.youtube.com/watch?v=5eMhC8Y1YbA"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03c"
+  },
+  "lectureTitle": "Trapping Rain Water | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-29-trapping-rain",
+  "videoUrl": "https://www.youtube.com/watch?v=0bG0y2B7wY8"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03d"
+  },
+  "lectureTitle": "Merge Two Sorted Arrays | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-30-merge-sorted",
+  "videoUrl": "https://www.youtube.com/watch?v=5g2h2z8i8qM"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03e"
+  },
+  "lectureTitle": "Merge Overlapping Intervals | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-31-merge-intervals",
+  "videoUrl": "https://www.youtube.com/watch?v=9kR8gM2l2zU"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb03f"
+  },
+  "lectureTitle": "Missing and Repeating Numbers | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-32-missing-repeating",
+  "videoUrl": "https://www.youtube.com/watch?v=5Q9qFHp5Z3Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb040"
+  },
+  "lectureTitle": "Count Inversions | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-33-count-inversions",
+  "videoUrl": "https://www.youtube.com/watch?v=2s0Y2rW9Y9Y"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb041"
+  },
+  "lectureTitle": "Square Root | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "arrays-34-square-root",
+  "videoUrl": "https://www.youtube.com/watch?v=8cGO3hKk2wE"
+},
+{
+  "_id": {
+    "$oid": "6931231c9631a5d2343cb042"
+  },
+  "lectureTitle": "Arrays Playlist Complete | What Next? | Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "arrays-35-complete",
+  "videoUrl": "https://www.youtube.com/watch?v=pYSXmQCrxlw"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb046"
+  },
+  "lectureTitle": "DevOps Pro Course launch | Live classes",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "devops-01-launch",
+  "videoUrl": "https://www.youtube.com/watch?v=2fXQvy0kFak"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb047"
+  },
+  "lectureTitle": "What is DevOps?",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-02-what-is-devops",
+  "videoUrl": "https://www.youtube.com/watch?v=ZbG0c87wcM8"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb048"
+  },
+  "lectureTitle": "DevOps Roadmap for Developers Switching to DevOps",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-03-roadmap",
+  "videoUrl": "https://www.youtube.com/watch?v=A8hhDuA9bw0"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb049"
+  },
+  "lectureTitle": "Linux Basics for DevOps",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-04-linux-basics",
+  "videoUrl": "https://www.youtube.com/watch?v=linux-devops1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04a"
+  },
+  "lectureTitle": "Git and GitHub Fundamentals",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-05-git-github",
+  "videoUrl": "https://www.youtube.com/watch?v=git-devops1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04b"
+  },
+  "lectureTitle": "Docker Introduction and Containers",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-06-docker-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=docker1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04c"
+  },
+  "lectureTitle": "Building Docker Images",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-07-docker-images",
+  "videoUrl": "https://www.youtube.com/watch?v=docker2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04d"
+  },
+  "lectureTitle": "Docker Compose for Multi-Container Apps",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-08-docker-compose",
+  "videoUrl": "https://www.youtube.com/watch?v=docker3"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04e"
+  },
+  "lectureTitle": "Kubernetes Basics",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-09-k8s-basics",
+  "videoUrl": "https://www.youtube.com/watch?v=k8s1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb04f"
+  },
+  "lectureTitle": "Pods and Deployments in Kubernetes",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-10-k8s-pods-deploy",
+  "videoUrl": "https://www.youtube.com/watch?v=k8s2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb050"
+  },
+  "lectureTitle": "Services and Ingress in K8s",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-11-k8s-services",
+  "videoUrl": "https://www.youtube.com/watch?v=k8s3"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb051"
+  },
+  "lectureTitle": "CI/CD with Jenkins",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-12-jenkins",
+  "videoUrl": "https://www.youtube.com/watch?v=jenkins1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb052"
+  },
+  "lectureTitle": "Jenkins Pipeline for DevOps",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-13-jenkins-pipeline",
+  "videoUrl": "https://www.youtube.com/watch?v=jenkins2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb053"
+  },
+  "lectureTitle": "GitHub Actions for CI/CD",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-14-github-actions",
+  "videoUrl": "https://www.youtube.com/watch?v=gha1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb054"
+  },
+  "lectureTitle": "Terraform Basics",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-15-terraform",
+  "videoUrl": "https://www.youtube.com/watch?v=terraform1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb055"
+  },
+  "lectureTitle": "AWS EC2 and VPC",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-16-aws-ec2-vpc",
+  "videoUrl": "https://www.youtube.com/watch?v=aws1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb056"
+  },
+  "lectureTitle": "AWS S3 and RDS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-17-aws-s3-rds",
+  "videoUrl": "https://www.youtube.com/watch?v=aws2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb057"
+  },
+  "lectureTitle": "Monitoring with Prometheus and Grafana",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-18-prometheus-grafana",
+  "videoUrl": "https://www.youtube.com/watch?v=prom1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb058"
+  },
+  "lectureTitle": "Logging with ELK Stack",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-19-elk-stack",
+  "videoUrl": "https://www.youtube.com/watch?v=elk1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb059"
+  },
+  "lectureTitle": "Ansible for Configuration Management",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-20-ansible",
+  "videoUrl": "https://www.youtube.com/watch?v=ansible1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05a"
+  },
+  "lectureTitle": "Infrastructure as Code with Terraform",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-21-iac-terraform",
+  "videoUrl": "https://www.youtube.com/watch?v=terraform2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05b"
+  },
+  "lectureTitle": "CI/CD Pipeline with GitHub Actions and K8s",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-22-cicd-k8s",
+  "videoUrl": "https://www.youtube.com/watch?v=cicd1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05c"
+  },
+  "lectureTitle": "Security in DevOps",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-23-security",
+  "videoUrl": "https://www.youtube.com/watch?v=sec1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05d"
+  },
+  "lectureTitle": "DevOps Best Practices",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "devops-24-best-practices",
+  "videoUrl": "https://www.youtube.com/watch?v=best1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05e"
+  },
+  "lectureTitle": "DevOps Case Studies",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-25-case-studies",
+  "videoUrl": "https://www.youtube.com/watch?v=case1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb05f"
+  },
+  "lectureTitle": "Advanced Docker Networking",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-26-docker-net",
+  "videoUrl": "https://www.youtube.com/watch?v=docker4"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb060"
+  },
+  "lectureTitle": "Kubernetes Helm for Package Management",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-27-k8s-helm",
+  "videoUrl": "https://www.youtube.com/watch?v=k8s4"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb061"
+  },
+  "lectureTitle": "Monitoring with New Relic",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-28-newrelic",
+  "videoUrl": "https://www.youtube.com/watch?v=monitor1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb062"
+  },
+  "lectureTitle": "Cloud Formation with AWS",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-29-cloudform",
+  "videoUrl": "https://www.youtube.com/watch?v=aws3"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb063"
+  },
+  "lectureTitle": "DevOps Project 1 - Deploy App with Docker",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-30-project1",
+  "videoUrl": "https://www.youtube.com/watch?v=project1"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb064"
+  },
+  "lectureTitle": "DevOps Project 2 - K8s Cluster Setup",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "devops-31-project2",
+  "videoUrl": "https://www.youtube.com/watch?v=project2"
+},
+{
+  "_id": {
+    "$oid": "6931269a9631a5d2343cb065"
+  },
+  "lectureTitle": "Final DevOps Bootcamp Wrapup",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "devops-32-wrapup",
+  "videoUrl": "https://www.youtube.com/watch?v=wrapup"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb069"
+  },
+  "lectureTitle": "Git Tutorial For Beginners in Hindi | Git Push Pull Clone Commit | GitHub | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "git-01-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=7tOLcNZfPso"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06a"
+  },
+  "lectureTitle": "What is Git and Why Should You Use It? | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-02-what-is-git",
+  "videoUrl": "https://www.youtube.com/watch?v=hwP7AQqTg8I"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06b"
+  },
+  "lectureTitle": "Git Installation and Configuration | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-03-installation",
+  "videoUrl": "https://www.youtube.com/watch?v=8Dd7KRpXso8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06c"
+  },
+  "lectureTitle": "Git Repository Creation and Initialization | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-04-repo-init",
+  "videoUrl": "https://www.youtube.com/watch?v=SWYqp7iY_Tc"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06d"
+  },
+  "lectureTitle": "Git Add and Commit Commands | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-05-add-commit",
+  "videoUrl": "https://www.youtube.com/watch?v=9hUfJKabMa8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06e"
+  },
+  "lectureTitle": "Git Branch and Checkout | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-06-branch-checkout",
+  "videoUrl": "https://www.youtube.com/watch?v=3QmhN8B8XqU"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb06f"
+  },
+  "lectureTitle": "Git Merge and Rebase | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-07-merge-rebase",
+  "videoUrl": "https://www.youtube.com/watch?v=RxuredA4J2I"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb070"
+  },
+  "lectureTitle": "Git Remote and Push Pull | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-08-remote-push-pull",
+  "videoUrl": "https://www.youtube.com/watch?v=3QhU9jd03a0"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb071"
+  },
+  "lectureTitle": "Git Clone and Fork | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-09-clone-fork",
+  "videoUrl": "https://www.youtube.com/watch?v=8jh7D6oL76Q"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb072"
+  },
+  "lectureTitle": "GitHub Introduction and Setup | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-10-github-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=iwOcvN4Z0q8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb073"
+  },
+  "lectureTitle": "Pull Requests in GitHub | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-11-pull-requests",
+  "videoUrl": "https://www.youtube.com/watch?v=3QhU9jd03a0"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb074"
+  },
+  "lectureTitle": "Git Stash and Reset | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-12-stash-reset",
+  "videoUrl": "https://www.youtube.com/watch?v=RxuredA4J2I"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb075"
+  },
+  "lectureTitle": "Git Log and Status | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-13-log-status",
+  "videoUrl": "https://www.youtube.com/watch?v=9hUfJKabMa8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb076"
+  },
+  "lectureTitle": "Git Tags and Cherry Pick | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-14-tags-cherrypick",
+  "videoUrl": "https://www.youtube.com/watch?v=SWYqp7iY_Tc"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb077"
+  },
+  "lectureTitle": "Git Workflows and Best Practices | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-15-workflows",
+  "videoUrl": "https://www.youtube.com/watch?v=8Dd7KRpXso8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb078"
+  },
+  "lectureTitle": "Git GUI Tools and VS Code Integration | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-16-gui-tools",
+  "videoUrl": "https://www.youtube.com/watch?v=hwP7AQqTg8I"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb079"
+  },
+  "lectureTitle": "Git for Collaboration | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-17-collaboration",
+  "videoUrl": "https://www.youtube.com/watch?v=7tOLcNZfPso"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb07a"
+  },
+  "lectureTitle": "Git Advanced Topics | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": false,
+  "publicId": "git-18-advanced",
+  "videoUrl": "https://www.youtube.com/watch?v=iwOcvN4Z0q8"
+},
+{
+  "_id": {
+    "$oid": "693129509631a5d2343cb07b"
+  },
+  "lectureTitle": "Git Tutorial Complete | What Next? | Git Tutorial For Beginners | Great Learning",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "git-19-complete",
+  "videoUrl": "https://www.youtube.com/watch?v=3QhU9jd03a0"
+},
+{
+  "_id": {
+    "$oid": "69312a8c9631a5d2343cb07f"
+  },
+  "lectureTitle": "Introduction to Cybersecurity and Ethical Hacking",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "cyber-01-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=v3iUx2SNspY"
+},
+{
+  "_id": {
+    "$oid": "69312b449631a5d2343cb083"
+  },
+  "lectureTitle": "Introduction to DBMS | DBMS Full Course in Hindi",
+  "createdAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T00:00:00.000Z"
+  },
+  "__v": 0,
+  "isPreviewFree": true,
+  "publicId": "dbms-01-intro",
+  "videoUrl": "https://www.youtube.com/watch?v=dl00fOOYLOM"
+}]
