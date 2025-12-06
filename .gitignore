@@ -1,16 +1,16 @@
 # Node modules
 node_modules/
 
-# Environment files
-.env
-.env.production
-*.env
-.env.development
+# Backend environment files (DO NOT COMMIT SECRETS)
+server/.env
+server/.env.docker
+server/.env.development
+
 # Logs
 *.log
 logs/
 
-# Uploaded files 
+# Uploaded files (if any used)
 uploads/
 public/uploads/
 
@@ -21,5 +21,6 @@ coverage/
 # IDE files
 .vscode/
 .idea/
-server/.env
-server/.env
+
+# Build artifacts (optional)
+dist/

@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: lms-app
+    restart: unless-stopped
+
+    env_file:
+      - ./server/.env.docker
+
+    ports:
+      - "8000:8000"

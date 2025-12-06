@@ -77,65 +77,18 @@ This project enables:
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Guides
 
-### 1️⃣ Clone the Repository
-
-git clone https://github.com/Amanc77/learning-management-system.git
-cd learning-management-system
-
-### 2️⃣ Install Dependencies
-
-Backend
-cd server
-npm install
-
-Frontend
-cd ../client
-npm install
-
-### 3️⃣ Configure Environment Variables
-
-Create a .env file in the server folder:
-
-```env
-# Server Configuration
-PORT=5000
-MONGO_URI=your_mongo_connection_string
-
-# Authentication
-JWT_SECRET=your_jwt_secret
-CLIENT_URL=http://localhost:5173
-
-# Cloudinary Configuration
-CLOUD_NAME=your_cloudinary_name
-API_KEY=your_cloudinary_api_key
-API_SECRET=your_cloudinary_api_secret
-
-# Razorpay Payment Gateway
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_SECRET=your_razorpay_secret
-```
-
-### 4️⃣ Run the Project
-
-Backend
-cd server
-npm run dev
-
-Frontend
-cd client
-npm run dev
-
----
-
-Please Give a GitHub ⭐️ : [https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
-
----
+- Manual & Docker setup → [SETUP.md](./SETUP.md)
+- Contribution guide → [CONTRIBUTION.md](./CONTRIBUTION.md)
 
 ## 🤝 Contributing
 
 Contributions are welcome!  
 Fork the repo ➔ Make your improvements ➔ Submit a Pull Request 🚀
+
+---
+
+Please Give a GitHub ⭐️ : [https://github.com/Amanc77/learning-management-system](https://github.com/Amanc77/learning-management-system)
 
 ---
